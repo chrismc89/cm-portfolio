@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="en"><head><style id="qw-theme">:root {
+  --color-bg: #f2f1f4;
+  --color-text: #352f3d;
+  --color-navbar-bg: #eae8ed;
+  --color-bg-chat-view: #fcfcfd;
+  --color-bg-secondary: #ffffff;
+  --color-bg-tertiary: #eae8ed;
+  --color-bg-hover: #dcdadf;
+  --color-surface: #eae8ed;
+  --color-surface-hover: #dcdadf;
+  --color-surface-active: #c1bec6;
+  --color-border: #c1bec6;
+  --color-border-light: #dcdadf;
+  --color-border-strong: #c1bec6;
+  --color-primary: #4200db;
+  --color-primary-dark: #35009e;
+  --color-primary-light: #8575ff;
+  --color-primary-bg: #e8e6ff;
+  --color-primary-hover-border: #35009e;
+  --color-nav-icon-active: #4200db;
+  --color-nav-hover-border: #4200db;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent);
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent);
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent);
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent);
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent);
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent);
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent);
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent);
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent);
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent);
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent);
+  --color-primary-subtle: color-mix(in srgb, #4200db 18%, transparent);
+  --color-primary-border: #8575ff;
+  --color-focus-ring: color-mix(in srgb, #4200db 50%, transparent);
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent);
+  --color-accent: #4200db;
+  --color-accent-foreground: #4200db;
+  --color-accent-dark: #35009e;
+  --color-accent-light: #e8e6ff;
+  --color-accent-inverse: #ffffff;
+  --color-link: #4200db;
+  --color-primary-gradient-end: #e8e6ff;
+  --color-primary-bg-solid: #eae8ed;
+  --color-user-bubble: #F3F3F7;
+  --color-user-bubble-text: #352f3d;
+  --color-text-secondary: #5e5966;
+  --color-text-tertiary: #7a7582;
+  --color-text-muted: #938f9b;
+  --color-text-on-primary: #f2f1f4;
+  --color-success: #00802f;
+  --color-success-dark: #00471e;
+  --color-success-light: #d9ffd6;
+  --color-success-hover: #005c26;
+  --color-success-bg: #e6f4eb;
+  --color-success-border: #c4dccb;
+  --color-success-foreground: #00802f;
+  --color-success-dark-foreground: #00471e;
+  --color-success-text: #00471e;
+  --color-error: #db0000;
+  --color-error-dark: #700000;
+  --color-error-light: #ffe0e0;
+  --color-error-hover: #ffe0e0;
+  --color-error-bg: #fbe9ea;
+  --color-error-border: #eecbcd;
+  --color-error-active-border: #db0000;
+  --color-error-foreground: #db0000;
+  --color-error-dark-foreground: #700000;
+  --color-error-inverse: #ffffff;
+  --color-error-text: #700000;
+  --color-warning: #f2b100;
+  --color-warning-dark: #573a00;
+  --color-warning-light: #fffbbd;
+  --color-warning-hover: #db9200;
+  --color-warning-bg: #fdf6e4;
+  --color-warning-border: #f5dda6;
+  --color-warning-foreground: #f2b100;
+  --color-warning-dark-foreground: #573a00;
+  --color-warning-inverse: #573a00;
+  --color-surface-warning: #fffbbd;
+  --color-text-warning: #573a00;
+  --color-info: #006ce0;
+  --color-info-dark: #002a66;
+  --color-info-light: #d1f1ff;
+  --color-info-hover: #003b8f;
+  --color-info-bg: #e6f0fb;
+  --color-info-border: #c0d5ec;
+  --color-info-foreground: #006ce0;
+  --color-info-dark-foreground: #002a66;
+  --color-info-inverse: #ffffff;
+  --color-overlay: #dcdadf80;
+  --color-shadow: #352f3d40;
+  --color-hover: #352f3d0d;
+  --color-tooltip-bg: #eae8ed;
+  --color-tooltip-text: #352f3d;
+  --color-voice-purple: #8575ff;
+  --color-voice-purple-dark: #4200db;
+  --color-voice-purple-light: #8575ff;
+  --color-voice-red: #db0000;
+  --color-voice-red-dark: #700000;
+  --color-voice-amber: #f2b100;
+  --color-voice-purple-glow: rgba(66, 0, 219, .4);
+  --color-voice-red-glow: rgba(219, 0, 0, .4);
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace;
+  --text-2xs: .5625rem;
+  --text-xs: .625rem;
+  --text-sm: .6875rem;
+  --text-base: .75rem;
+  --text-md: .8125rem;
+  --text-lg: .875rem;
+  --text-xl: 1rem;
+  --text-2xl: 1.125rem;
+  --text-3xl: 1.25rem;
+  --text-4xl: 1.5rem;
+  --text-5xl: 2rem;
+  --spacing-1: calc(.25rem * 1);
+  --spacing-1-5: calc(.25rem * 1.5);
+  --spacing-2: calc(.25rem * 2);
+  --spacing-3: calc(.25rem * 3);
+  --spacing-4: calc(.25rem * 4);
+  --spacing-5: calc(.25rem * 5);
+  --spacing-6: calc(.25rem * 6);
+  --spacing-7: calc(.25rem * 7);
+  --spacing-8: calc(.25rem * 8);
+  --spacing-9: calc(.25rem * 9);
+  --spacing-10: calc(.25rem * 10);
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-card: 12px;
+  --radius-lg: 16px;
+  --radius-pill: 8px;
+  --shadow-sm: 0 1px 2px rgba(53, 47, 61, .06);
+  --shadow-md: 0 4px 12px rgba(53, 47, 61, .1);
+  --color-success-bg-solid: #d9ffd6;
+  --color-error-bg-solid: #ffe0e0;
+  --color-error-border-solid: #ffe0e0;
+  --color-warning-bg-solid: #fffbbd;
+  --color-warning-text: #573a00;
+  --color-info-bg-solid: #d1f1ff;
+  --color-info-bg-solid-alt: #d1f1ff;
+  --color-info-text: #002a66;
+  --color-info-text-alt: #002a66;
+  --color-emerald: #367c53;
+  --color-teal: #0c9aa7;
+  --color-code-bg: #eae8ed;
+  --color-code-header-bg: #dcdadf;
+  --color-code-text: #352f3d;
+  --color-code-border: #c1bec6;
+  --color-code-muted: #5e5966;
+  --color-inline-code-bg: #eae8ed;
+  --color-inline-code-text: #352f3d;
+  --color-inline-code-border: #c1bec6;
+  --color-scrollbar-thumb: #c1bec6;
+  --color-scrollbar-track: transparent;
+  --color-graph-node-text: #352f3d;
+  --color-graph-node-text-dim: #938f9b;
+  --color-graph-edge-default: #938f9b;
+  --color-graph-edge-cross: #d08025;
+  --color-graph-edge-text: #5e5966;
+  --color-graph-edge-stroke: #f2f1f4;
+  --color-graph-highlight-bg: #FF6B6B;
+  --color-graph-highlight-border: #E74C3C;
+  --color-graph-search-bg: #FFD700;
+  --color-graph-search-border: #FFA500;
+  --color-graph-focus-border: #C0392B;
+  --color-graph-external-border: #938f9b;
+  --color-graph-cat-file: #3878b0;
+  --color-graph-cat-folder: #5e5966;
+  --color-graph-cat-file-aggregate: #2d6a9f;
+  --color-graph-cat-class: #7138cc;
+  --color-graph-cat-function: #367c53;
+  --color-graph-cat-method: #0c9aa7;
+  --color-graph-cat-variable: #d08025;
+  --color-graph-cat-import: #b06a1a;
+  --color-graph-cat-module: #5e35a8;
+  --color-graph-cat-concept: #993333;
+  --color-graph-cat-person: #c44d4d;
+  --color-graph-cat-org: #0c9aa7;
+  --color-graph-cat-organization: #0c9aa7;
+  --color-graph-cat-product: #8e47ff;
+  --color-graph-cat-metric: #c44d78;
+  --color-graph-cat-location: #34495E;
+  --color-graph-cat-date: #b34d8a;
+  --color-graph-cat-code: #3878b0;
+  --color-graph-cat-doc: #5e5966;
+  --color-graph-cat-url: #367c53;
+  --color-graph-cat-email: #5e35a8;
+  --color-graph-cat-unknown: #938f9b;
+  --color-graph-rel-contains: #938f9b;
+  --color-graph-rel-extends: #7138cc;
+  --color-graph-rel-implements: #3878b0;
+  --color-graph-rel-imports: #d08025;
+  --color-graph-rel-uses: #367c53;
+  --color-graph-rel-calls: #367c53;
+  --color-graph-rel-references: #d08025;
+  --color-graph-rel-related-to: #938f9b;
+  --color-graph-rel-works-on: #993333;
+  --color-graph-rel-owns: #0c9aa7;
+  --color-graph-rel-depends-on: #b06a1a;
+  --color-graph-rel-parent-of: #938f9b;
+  --qs-content: #fff;
+  --qs-main: #fff;
+  --qs-primary-foreground: #131920;
+  --qs-secondary-foreground: #656871;
+  --qs-tertiary-foreground: #938f9b;
+  --qs-placeholder-foreground: #8c8c94;
+  --qs-divider: #dedee3;
+  --qs-default-border: #8c8c94;
+  --qs-neutral-soft: #b4b4bb;
+  --qs-neutral-gray-50: #eae8ed;
+  --qs-tertiary-background: #eae8ed;
+  --qs-action-hover: #f3f3f7;
+  --qs-primary-default: #4200db;
+  --qs-primary-dark: #35009e;
+  --qs-primary-light: #e8e6ff;
+  --qs-success-default: #00802f;
+  --qs-error-default: #db0000;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  --qs-font-base-letter-spacing: .15px;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029;
+  --qs-width-modal-sm: 384px;
+  --qs-width-modal-md: 600px;
+  --qs-width-modal-lg: 1136px;
+  --qs-grid-gap: 16px;
+  --qs-grid-gap-xl: 24px;
+  --qs-primary-medium: #8575ff;
+  --qs-primary-inverse: #fff;
+  --qs-neutral-lightest: #f9f9fb;
+  --qs-neutral-light: #f3f3f7;
+  --qs-neutral-default: #dedee3;
+  --qs-neutral-medium: #8c8c94;
+  --qs-neutral-deep: #656871;
+  --qs-neutral-dark: #333843;
+  --qs-neutral-strong: #131920;
+  --qs-neutral-white: #fff;
+  --qs-neutral-black: #000;
+  --qs-success-medium: #005c26;
+  --qs-success-dark: #00471e;
+  --qs-success-light: #d9ffd6;
+  --qs-success-inverse: #fff;
+  --qs-info-default: #006ce0;
+  --qs-info-medium: #003b8f;
+  --qs-info-dark: #002a66;
+  --qs-info-light: #d1f1ff;
+  --qs-info-inverse: #fff;
+  --qs-warning-default: #f2b100;
+  --qs-warning-medium: #db9200;
+  --qs-warning-dark: #573a00;
+  --qs-warning-light: #fffbbd;
+  --qs-warning-inverse: #573a00;
+  --qs-warning-experimental: #f2b100;
+  --qs-warning-experimental-light: #fffbbd;
+  --qs-warning-experimental-light-foreground: #fffbbd;
+  --qs-error-medium: #900;
+  --qs-error-dark: #700000;
+  --qs-error-light: #ffe0e0;
+  --qs-error-inverse: #fff;
+  --qs-connection-default: #db3300;
+  --qs-connection-soft: #ff997a;
+  --qs-connection-light: #ffe0d6;
+  --qs-connection-dark: #661800;
+  --qs-automation-default: #b3008f;
+  --qs-automation-medium: #d600ba;
+  --qs-automation-soft: #ff94f1;
+  --qs-automation-light: #ffe0fb;
+  --qs-automation-dark: #660052;
+  --qs-insight-default: #a000b8;
+  --qs-insight-soft: #f299ff;
+  --qs-insight-light: #fce6ff;
+  --qs-insight-dark: #590066;
+  --qs-visualization-default: #7300e5;
+  --qs-visualization-soft: #d4a8ff;
+  --qs-visualization-light: #f2e5ff;
+  --qs-visualization-dark: #45008a;
+  --qs-spice: #ff9800;
+  --qs-coachmark: #006ce0;
+  --qs-brand: #fff;
+  --qs-brand-foreground: #131920;
+  --qs-brand-navbar: #131920;
+  --qs-brand-navbar-foreground: #fff;
+  --qs-brand-navbar-light: #dedee3;
+  --qs-brand-navbar-dark: #000;
+  --qs-application-navbar: #4200db;
+  --qs-application-navbar-foreground: #fff;
+  --qs-application-navbar-light: #e8e6ff;
+  --qs-application-navbar-dark: #35009e;
+  --qs-dimension: #4200db;
+  --qs-dimension-foreground: #fff;
+  --qs-dimension-experimental: #4200db;
+  --qs-dimension-experimental-foreground: #4200db;
+  --qs-measure: #00802f;
+  --qs-measure-foreground: #fff;
+  --qs-measure-experimental: #f2b100;
+  --qs-measure-experimental-foreground: #f2b100;
+  --qs-content-inverse: #333843;
+  --qs-content-inverse-active: #131920;
+  --qs-secondary: #dedee3;
+  --qs-disabled: #8c8c94;
+  --qs-divider-light: #f3f3f7;
+  --qs-hover-border: #333843;
+  --qs-active-border: #4200db;
+  --qs-disabled-border: #dedee3;
+  --qs-error-border: #ffe0e0;
+  --qs-error-active-border: #db0000;
+  --qs-disabled-foreground: #b4b4bb;
+  --qs-primary-inverse-foreground: #fff;
+  --qs-error-foreground: #db0000;
+  --qs-contrast-foreground: #131920;
+  --qs-main-foreground: #131920;
+  --qs-main-secondary-foreground: #656871;
+  --qs-action-disabled: #f3f3f7;
+  --qs-action-active: #e8e6ff;
+  --qs-default-badge: #dedee3;
+  --qs-tag-default: #dedee3;
+  --qs-tag-soft-border: #b4b4bb;
+  --qs-focus-offset: 1px;
+  --qs-toggle-tile-sm: calc(.25rem * 8);
+  --qs-toggle-tile-md: calc(.25rem * 12);
+  --qs-toggle-tile-lg: calc(.25rem * 15);
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029;
+  --react-pdf-text-layer: 1;
+  --highlight-bg-color: rgba(180, 0, 170, 1);
+  --highlight-selected-bg-color: rgba(0, 100, 0, 1);
+  --react-pdf-annotation-layer: 1;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>");
+  --input-focus-border-color: Highlight;
+  --input-focus-outline: 1px solid Canvas;
+  --input-unfocused-border-color: transparent;
+  --input-disabled-border-color: transparent;
+  --input-hover-border-color: black;
+  --link-outline: none;
+  color-scheme: light;
+}
+body { background: var(--color-bg); color: var(--color-text); }
+a { color: var(--color-link, var(--color-primary)); }</style>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Christopher McCourt — AI &amp; Cloud Development Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+  :root {
+
+    --teal:        #006B6B;
+
+    --teal-mid:    #009090;
+
+    --teal-lite:   #E0F4F4;
+
+    --teal-dark:   #004F4F;
+
+    --amber:       #C85A00;
+
+    --amber-lite:  #FFF3E0;
+
+    --green:       #15803D;
+
+    --green-lite:  #F0FDF4;
+
+    --slate:       #1E293B;
+
+    --mid:         #475569;
+
+    --light:       #94A3B8;
+
+    --bg:          #F0F4F8;
+
+    --surface:     #FFFFFF;
+
+    --border:      #E2E8F0;
+
+    --border-mid:  #CBD5E1;
+
+    --navy:        #0F172A;
+
+    --radius:      10px;
+
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+
+
+  body {
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+    background: var(--bg);
+
+    color: var(--slate);
+
+    line-height: 1.6;
+
+  }
+
+
+
+  /* ── NAV ── */
+
+  nav {
+
+    position: sticky; top: 0; z-index: 100;
+
+    background: var(--navy);
+
+    border-bottom: 2px solid var(--teal);
+
+    padding: 0 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    height: 56px;
+
+  }
+
+  .nav-brand {
+
+    font-size: 13px; font-weight: 700;
+
+    color: #E2E8F0;
+
+    letter-spacing: .5px;
+
+  }
+
+  .nav-brand span { color: var(--teal-mid); }
+
+  .nav-links { display: flex; gap: 6px; }
+
+  .nav-links a {
+
+    color: #94A3B8; font-size: 12px; font-weight: 500;
+
+    text-decoration: none; padding: 6px 12px; border-radius: 6px;
+
+    transition: all .15s ease;
+
+    letter-spacing: .3px;
+
+  }
+
+  .nav-links a:hover { color: #E2E8F0; background: rgba(255,255,255,.08); }
+
+  .nav-cta {
+
+    background: var(--teal) !important;
+
+    color: white !important;
+
+  }
+
+  .nav-cta:hover { background: var(--teal-mid) !important; }
+
+
+
+  /* ── HERO ── */
+
+  .hero {
+
+    background: linear-gradient(135deg, var(--navy) 0%, #073B3B 100%);
+
+    padding: 72px 32px 60px;
+
+    text-align: center;
+
+  }
+
+  .hero-eyebrow {
+
+    display: inline-block;
+
+    font-size: 10.5px; font-weight: 700; letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    color: var(--teal-mid);
+
+    margin-bottom: 16px;
+
+  }
+
+  .hero h1 {
+
+    font-size: clamp(28px, 5vw, 46px);
+
+    font-weight: 800;
+
+    color: #F1F5F9;
+
+    line-height: 1.15;
+
+    max-width: 780px;
+
+    margin: 0 auto 12px;
+
+  }
+
+  .hero h1 em { color: var(--teal-mid); font-style: normal; }
+
+  .hero-sub {
+
+    font-size: 16px; color: #94A3B8;
+
+    max-width: 580px; margin: 0 auto 28px;
+
+  }
+
+  .hero-badges { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px; }
+
+  .hero-badge {
+
+    font-size: 11px; font-weight: 600; letter-spacing: .8px;
+
+    text-transform: uppercase;
+
+    padding: 6px 14px; border-radius: 20px;
+
+    border: 1.5px solid rgba(255,255,255,.15);
+
+    color: #CBD5E1;
+
+  }
+
+  .hero-badge.teal { border-color: var(--teal-mid); color: var(--teal-mid); }
+
+  .hero-badge.amber { border-color: #E97316; color: #FB923C; }
+
+  .hero-cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+
+  .btn {
+
+    display: inline-flex; align-items: center; gap: 8px;
+
+    padding: 11px 22px; border-radius: 8px;
+
+    font-size: 13px; font-weight: 600; text-decoration: none;
+
+    transition: all .15s ease; cursor: pointer;
+
+    border: none;
+
+  }
+
+  .btn-primary { background: var(--teal); color: white; }
+
+  .btn-primary:hover { background: var(--teal-mid); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,107,107,.4); }
+
+  .btn-ghost { background: rgba(255,255,255,.08); color: #CBD5E1; border: 1.5px solid rgba(255,255,255,.15); }
+
+  .btn-ghost:hover { background: rgba(255,255,255,.14); color: white; }
+
+
+
+  /* ── LAYOUT ── */
+
+  .container { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+
+  .section { padding: 56px 0; }
+
+  .section-label {
+
+    font-size: 10.5px; font-weight: 700; letter-spacing: 2px;
+
+    text-transform: uppercase; color: var(--teal);
+
+    margin-bottom: 8px;
+
+  }
+
+  .section-title { font-size: 22px; font-weight: 800; color: var(--slate); margin-bottom: 6px; }
+
+  .section-sub { font-size: 14px; color: var(--mid); margin-bottom: 36px; max-width: 600px; }
+
+
+
+  /* ── STATS ROW ── */
+
+  .stats-row {
+
+    display: grid; grid-template-columns: repeat(4, 1fr);
+
+    gap: 16px; margin-bottom: 56px;
+
+  }
+
+  .stat-card {
+
+    background: var(--surface); border: 1.5px solid var(--border);
+
+    border-radius: var(--radius); padding: 20px;
+
+    text-align: center;
+
+  }
+
+  .stat-num { font-size: 30px; font-weight: 800; color: var(--teal); line-height: 1; }
+
+  .stat-label { font-size: 11.5px; color: var(--mid); margin-top: 6px; }
+
+
+
+  /* ── APP CARDS ── */
+
+  .apps-grid { display: flex; flex-direction: column; gap: 20px; }
+
+  .app-card {
+
+    background: var(--surface); border: 1.5px solid var(--border);
+
+    border-radius: var(--radius); overflow: hidden;
+
+    transition: box-shadow .2s ease;
+
+  }
+
+  .app-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,.1); }
+
+
+
+  .app-head {
+
+    padding: 16px 22px;
+
+    display: flex; align-items: center; justify-content: space-between; gap: 16px;
+
+    border-bottom: 1.5px solid var(--border);
+
+    background: #FAFCFC;
+
+  }
+
+  .app-num {
+
+    font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
+
+    text-transform: uppercase; color: var(--light);
+
+    margin-bottom: 2px;
+
+  }
+
+  .app-head h2 { font-size: 18px; font-weight: 800; color: var(--slate); }
+
+  .app-tag { font-size: 12.5px; color: var(--mid); margin-top: 2px; }
+
+
+
+  .status-pill {
+
+    font-size: 10px; font-weight: 700; letter-spacing: .8px;
+
+    text-transform: uppercase; padding: 5px 12px; border-radius: 20px;
+
+    white-space: nowrap; flex-shrink: 0;
+
+  }
+
+  .prod  { background: #DCFCE7; color: var(--green); }
+
+  .dev   { background: var(--amber-lite); color: var(--amber); }
+
+  .proto { background: #F1F5F9; color: var(--mid); }
+
+  .svc   { background: #EDE9FE; color: #6D28D9; }
+
+
+
+  .app-body { padding: 20px 22px; }
+
+  .stack-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+
+  .chip {
+
+    background: var(--teal-lite); color: var(--teal);
+
+    font-size: 10.5px; font-weight: 600;
+
+    padding: 4px 10px; border-radius: 5px;
+
+  }
+
+  .chip-purple { background: #EDE9FE; color: #6D28D9; }
+
+
+
+  .app-desc {
+
+    font-size: 13.5px; color: var(--mid); line-height: 1.65;
+
+    margin-bottom: 14px;
+
+  }
+
+  .app-desc strong { color: var(--slate); }
+
+
+
+  .proof-list { list-style: none; padding: 0; }
+
+  .proof-list li {
+
+    font-size: 12.5px; color: var(--mid);
+
+    padding: 7px 0 7px 18px; border-bottom: 1px dashed var(--border);
+
+    line-height: 1.55; position: relative;
+
+  }
+
+  .proof-list li:last-child { border-bottom: none; }
+
+  .proof-list li::before { content: "▸"; color: var(--teal); font-weight: 700; position: absolute; left: 0; }
+
+  .proof-list li strong { color: var(--slate); }
+
+
+
+  .scope-note {
+
+    margin-top: 12px; padding-top: 10px;
+
+    border-top: 1px solid var(--border);
+
+    font-size: 11px; color: var(--light); font-style: italic; line-height: 1.55;
+
+  }
+
+
+
+  /* shared-service card dark variant */
+
+  .app-card.dark-card {
+
+    background: linear-gradient(135deg, var(--navy) 0%, #073B3B 100%);
+
+    border-color: #1E3A3A;
+
+  }
+
+  .dark-card .app-head { background: rgba(255,255,255,.04); border-color: rgba(255,255,255,.1); }
+
+  .dark-card .app-num { color: #475569; }
+
+  .dark-card .app-head h2 { color: #F1F5F9; }
+
+  .dark-card .app-tag { color: #64748B; }
+
+  .dark-card .chip { background: rgba(0,144,144,.3); color: #D5F5F5; }
+
+  .dark-card .app-desc { color: #CBD5E1; }
+
+  .dark-card .app-desc strong { color: #F1F5F9; }
+
+  .dark-card .proof-list li { color: #CBD5E1; border-color: #1E3A3A; }
+
+  .dark-card .proof-list li strong { color: #F1F5F9; }
+
+  .dark-card .proof-list li::before { color: var(--teal-mid); }
+
+  .dark-card .scope-note { color: #475569; border-color: #1E3A3A; }
+
+
+
+  /* ── ROLE MAPPING ── */
+
+  .role-grid {
+
+    display: grid; grid-template-columns: 1fr 1fr;
+
+    gap: 16px;
+
+  }
+
+  .role-card {
+
+    background: var(--surface); border: 1.5px solid var(--border);
+
+    border-radius: var(--radius); padding: 20px;
+
+  }
+
+  .role-card h3 {
+
+    font-size: 13px; font-weight: 700; text-transform: uppercase;
+
+    letter-spacing: .8px; color: var(--teal); margin-bottom: 12px;
+
+  }
+
+  .role-list { list-style: none; padding: 0; }
+
+  .role-list li {
+
+    font-size: 12.5px; color: var(--mid);
+
+    padding: 6px 0 6px 16px; border-bottom: 1px dashed var(--border);
+
+    line-height: 1.5; position: relative;
+
+  }
+
+  .role-list li:last-child { border-bottom: none; }
+
+  .role-list li::before { content: "•"; color: var(--teal); position: absolute; left: 0; font-weight: 700; }
+
+  .role-list li strong { color: var(--slate); }
+
+
+
+  /* ── ABOUT / CONTEXT ── */
+
+  .context-block {
+
+    background: var(--teal-lite); border: 1.5px solid #99DADA;
+
+    border-left: 5px solid var(--teal);
+
+    border-radius: var(--radius); padding: 18px 22px;
+
+    margin-bottom: 20px;
+
+  }
+
+  .context-block h4 {
+
+    font-size: 10.5px; font-weight: 700; text-transform: uppercase;
+
+    letter-spacing: 1.2px; color: var(--teal); margin-bottom: 6px;
+
+  }
+
+  .context-block p { font-size: 13.5px; color: var(--mid); line-height: 1.65; }
+
+  .context-block p strong { color: var(--slate); }
+
+
+
+  /* ── FOOTER ── */
+
+  footer {
+
+    background: var(--navy);
+
+    border-top: 2px solid var(--teal);
+
+    padding: 36px 32px;
+
+    text-align: center;
+
+  }
+
+  footer .footer-name {
+
+    font-size: 16px; font-weight: 800; color: #E2E8F0; margin-bottom: 6px;
+
+  }
+
+  footer .footer-sub { font-size: 12.5px; color: #64748B; margin-bottom: 18px; }
+
+  footer .footer-links { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+  footer a {
+
+    font-size: 12.5px; color: var(--teal-mid);
+
+    text-decoration: none;
+
+    display: inline-flex; align-items: center; gap: 6px;
+
+  }
+
+  footer a:hover { color: #5EEAD4; }
+
+  footer .copyright { margin-top: 20px; font-size: 10.5px; color: #334155; }
+
+
+
+  /* ── RESPONSIVE ── */
+
+  @media (max-width: 680px) {
+
+    .stats-row { grid-template-columns: 1fr 1fr; }
+
+    .role-grid { grid-template-columns: 1fr; }
+
+    nav { padding: 0 16px; }
+
+    .nav-links { display: none; }
+
+    .hero { padding: 48px 16px 40px; }
+
+  }
+
+</style>
+
+</head>
+
+<body>
+
+
+
+<!-- NAV -->
+
+<nav>
+
+  <div class="nav-brand">Christopher McCourt — <span>AI &amp; Cloud Dev</span></div>
+
+  <div class="nav-links">
+
+    <a href="#builds">Builds</a>
+
+    <a href="#roles">Target Roles</a>
+
+    <a href="#about">About</a>
+
+    <a href="mailto:chris@cmccourt.net" class="nav-cta"><i class="fa-solid fa-envelope"></i> Contact</a>
+
+  </div>
+
+</nav>
+
+
+
+<!-- HERO -->
+
+<div class="hero">
+
+  <div class="hero-eyebrow">AI &amp; Cloud Development Portfolio · July 2026</div>
+
+  <h1>Delivery Manager.<br><em>Hands-On Builder.</em></h1>
+
+  <p class="hero-sub">15+ years leading enterprise technology delivery — with a GitHub history to prove it. Five independently-built applications across two cloud providers, plus a shared agentic service.</p>
+
+  <div class="hero-badges">
+
+    <span class="hero-badge teal">Delivery Leader</span>
+
+    <span class="hero-badge amber">Hands-On Builder</span>
+
+    <span class="hero-badge">PMP · SAFe LPM · AWS CCP</span>
+
+    <span class="hero-badge">Nashville, TN · Remote</span>
+
+  </div>
+
+  <div class="hero-cta">
+
+    <a href="https://github.com/chrismc89" class="btn btn-primary" target="_blank">
+
+      <i class="fa-brands fa-github"></i> View GitHub
+
+    </a>
+
+    <a href="mailto:chris@cmccourt.net" class="btn btn-ghost">
+
+      <i class="fa-solid fa-paper-plane"></i> Get in Touch
+
+    </a>
+
+    <a href="https://linkedin.com/in/cmccourt" class="btn btn-ghost" target="_blank">
+
+      <i class="fa-brands fa-linkedin"></i> LinkedIn
+
+    </a>
+
+  </div>
+
+</div>
+
+
+
+<!-- MAIN -->
+
+<div class="container">
+
+
+
+  <!-- STATS -->
+
+  <div class="section">
+
+    <div class="stats-row">
+
+      <div class="stat-card">
+
+        <div class="stat-num">5</div>
+
+        <div class="stat-label">Independently-built apps</div>
+
+      </div>
+
+      <div class="stat-card">
+
+        <div class="stat-num">3</div>
+
+        <div class="stat-label">In production &amp; deployed</div>
+
+      </div>
+
+      <div class="stat-card">
+
+        <div class="stat-num">2</div>
+
+        <div class="stat-label">Cloud providers (AWS + Azure)</div>
+
+      </div>
+
+      <div class="stat-card">
+
+        <div class="stat-num">1</div>
+
+        <div class="stat-label">Live agentic AI service</div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- CONTEXT BOX -->
+
+    <div class="context-block">
+
+      <h4>🛠️ Why This Portfolio Exists</h4>
+
+      <p>15+ years leading enterprise delivery doesn't usually come with a GitHub history. This is the proof that it does here: five applications spanning two cloud providers, <strong>independently designed, built, deployed, and debugged</strong> — not prototyped in a workshop and handed to an engineering team. Every claim below is verified against source code, infrastructure configs, or live deployment logs, not marketing language.</p>
+
+    </div>
+
+
+
+    <!-- APPS -->
+
+    <div id="builds">
+
+      <div class="section-label">Applications</div>
+
+      <div class="section-title">The Builds</div>
+
+      <div class="section-sub">Five apps plus a shared agentic service — each with a real use case, real infrastructure, and a real deployment story.</div>
+
+
+
+      <div class="apps-grid">
+
+
+
+
+
+        <!-- PM AGENT -->
+
+        <div class="app-card dark-card" style="border-color: #2D1F5E;">
+
+          <div class="app-head" style="background: rgba(124,79,209,0.12); border-color: rgba(124,79,209,0.3);">
+
+            <div>
+
+              <div class="app-num" style="color:#7C4FD1;">Application 00 — Featured Build</div>
+
+              <h2 style="color:#F1F5F9;">PM Agent</h2>
+
+              <div class="app-tag" style="color:#94A3B8;">Agentic AI project management system — MCP · FastAPI · 3 AI surfaces</div>
+
+            </div>
+
+            <div class="status-pill svc" style="background:#EDE9FE; color:#6D28D9;">Production · Deployed</div>
+
+          </div>
+
+          <div class="app-body">
+
+            <div class="stack-row">
+
+              <span class="chip chip-purple">FastAPI (Python)</span>
+
+              <span class="chip chip-purple">MCP Server (30 tools)</span>
+
+              <span class="chip chip-purple">AWS App Runner</span>
+
+              <span class="chip chip-purple">Docker → ECR</span>
+
+              <span class="chip chip-purple">PostgreSQL + pgvector</span>
+
+              <span class="chip chip-purple">Terraform IaC</span>
+
+              <span class="chip chip-purple">Anthropic Claude</span>
+
+              <span class="chip chip-purple">Amazon Bedrock</span>
+
+            </div>
+
+            <p class="app-desc" style="color:#CBD5E1;">An agentic AI assistant for program and delivery managers built around a real PM mental model: ingest delivery data → score it deterministically → layer LLM judgment on top → expose 30 tools via MCP to whichever AI surface the user already works in. <strong style="color:#F1F5F9;">Works natively inside Claude Desktop, ChatGPT (custom GPT), and Microsoft 365 Copilot.</strong></p>
+
+            <ul class="proof-list">
+
+              <li><strong style="color:#F1F5F9;">30 MCP tools</strong> across 4 role-based personas — Program Manager, Product Manager, Product Owner, Shared — each with a distinct tool visibility set.</li>
+
+              <li><strong style="color:#F1F5F9;">10-layer pipeline</strong>: Jira ingest → normalization → PostgreSQL → deterministic risk engine (Tier 1, always on) → LLM judgment (Tier 2, on demand) → analysis modules → synthesis → Core Agent API → MCP/OpenAPI/Copilot adapters → AI surface.</li>
+
+              <li><strong style="color:#F1F5F9;">Audited LLM adapter</strong> — every Tier-2 call passes a 4-step chain in code: kill switch → governance approval → PII sanitization → audit log. Graceful degradation to Tier-1 rules on any failure.</li>
+
+              <li><strong style="color:#F1F5F9;">NIST AI RMF 1.0 + PMI-CPMAI governance alignment</strong> — explainability, human oversight, data minimization, and lifecycle controls designed in at the architecture level.</li>
+
+              <li><strong style="color:#F1F5F9;">Three AI surfaces</strong>: Claude (MCP — stdio + Streamable HTTP), ChatGPT (custom GPT via OpenAPI action), Microsoft 365 Copilot (declarative agent via Teams).</li>
+
+              <li><strong style="color:#F1F5F9;">Terraform IaC</strong> — ECR repo, App Runner service, EventBridge nightly batch rescore, all declaratively managed.</li>
+
+            </ul>
+
+            <div class="scope-note" style="border-color:#2D1F5E; color:#64748B;">
+
+              Source: <a href="https://github.com/chrismc89/PM-Agent" target="_blank" style="color:#A78BFA;">github.com/chrismc89/PM-Agent</a> · Production · Deployed on AWS App Runner · Last verified July 2026
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- APP 01 -->
+
+        <div class="app-card">
+
+          <div class="app-head">
+
+            <div>
+
+              <div class="app-num">Application 01</div>
+
+              <h2>CareerIQ</h2>
+
+              <div class="app-tag">Personalized AI career-intelligence web app</div>
+
+            </div>
+
+            <div class="status-pill prod">Production · Deployed</div>
+
+          </div>
+
+          <div class="app-body">
+
+            <div class="stack-row">
+
+              <span class="chip">AWS Lambda</span>
+
+              <span class="chip">S3</span>
+
+              <span class="chip">CloudFront</span>
+
+              <span class="chip">Cognito (OAuth2/PKCE)</span>
+
+              <span class="chip">SSM Parameter Store</span>
+
+              <span class="chip">KMS</span>
+
+              <span class="chip">Anthropic API</span>
+
+            </div>
+
+            <p class="app-desc">Five prompt-configured AI modules — <strong>JD fit/gap scoring &amp; resume tailoring, company research, application-strategy planning, interview prep, and profile management</strong> — served from a single-page app on AWS serverless infrastructure with a live Claude API integration.</p>
+
+            <ul class="proof-list">
+
+              <li><strong>OAuth2/PKCE authentication</strong> via Cognito; invite-only access enforced end to end.</li>
+
+              <li><strong>KMS-encrypted secrets management</strong> — API key stored as an SSM SecureString, never hardcoded or client-side.</li>
+
+              <li><strong>Live LLM integration</strong> — Lambda proxy calls Anthropic API directly; model-string cutover handled after mid-cycle model retirement.</li>
+
+              <li>Solo-diagnosed a full <strong>CORS/auth debugging arc</strong> across 9 build sessions — root causes included stale IAM policy, duplicate CORS headers, API Gateway stage-prefix mismatches, resolved by moving to a Lambda Function URL.</li>
+
+            </ul>
+
+            <div class="scope-note">Scope note: 5 prompt-configured modules — not a multi-agent system. No inter-module handoff or autonomous planning.</div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- APP 02 -->
+
+        <div class="app-card">
+
+          <div class="app-head">
+
+            <div>
+
+              <div class="app-num">Application 02</div>
+
+              <h2>Delivery Insights</h2>
+
+              <div class="app-tag">Multi-methodology delivery-analytics platform</div>
+
+            </div>
+
+            <div class="status-pill prod">Production · Deployed</div>
+
+          </div>
+
+          <div class="app-body">
+
+            <div class="stack-row">
+
+              <span class="chip">Azure Static Web Apps</span>
+
+              <span class="chip">Entra External ID (MSAL.js/PKCE)</span>
+
+              <span class="chip">Key Vault</span>
+
+              <span class="chip">Table Storage</span>
+
+              <span class="chip">GitHub Actions CI/CD</span>
+
+            </div>
+
+            <p class="app-desc">Turns Jira exports into <strong>earned-value metrics (SPI/CPI/EAC), flow metrics, and ranked delivery-risk signals</strong> across Scrum, Kanban, SAFe, and PMI methodologies — a single tool that speaks four delivery frameworks' native vocabulary.</p>
+
+            <ul class="proof-list">
+
+              <li><strong>Zero-data-egress design</strong> — client Jira data is processed and never persisted outside the customer's own tenant boundary.</li>
+
+              <li><strong>Full CI/CD via GitHub Actions</strong> to Azure Static Web Apps, with Entra External ID + MSAL.js PKCE auth flow.</li>
+
+              <li><strong>Vanilla JS front end with no build step</strong> — deliberately zero-dependency for long-term maintainability.</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- APP 03 -->
+
+        <div class="app-card">
+
+          <div class="app-head">
+
+            <div>
+
+              <div class="app-num">Application 03</div>
+
+              <h2>Northline <span style="font-size:13px;color:var(--light);font-weight:400;">(dev codename: Waypoint)</span></h2>
+
+              <div class="app-tag">Program/PI health dashboard with deterministic risk engine</div>
+
+            </div>
+
+            <div class="status-pill dev">Active Development</div>
+
+          </div>
+
+          <div class="app-body">
+
+            <div class="stack-row">
+
+              <span class="chip">FastAPI + PostgreSQL</span>
+
+              <span class="chip">Next.js 16 / React 19 / TypeScript</span>
+
+              <span class="chip">Azure Container Apps</span>
+
+              <span class="chip">Entra ID (EasyAuth)</span>
+
+              <span class="chip">Bicep IaC</span>
+
+              <span class="chip">pytest + Hypothesis</span>
+
+            </div>
+
+            <p class="app-desc">Ingests Jira data (API pull or CSV/XLSX upload) and runs it through a <strong>9-rule deterministic risk engine</strong> producing typed, severity-scored findings — plus Monte Carlo forecasting, a Gantt roadmap view, and a stakeholder-analysis module.</p>
+
+            <ul class="proof-list">
+
+              <li><strong>Parallel LLM orchestration</strong> — 8 independent analysis sections execute concurrently via <code>asyncio.TaskGroup</code>, multiplexed onto one SSE stream with per-section timeout/error isolation.</li>
+
+              <li><strong>Human-in-the-loop regeneration</strong> — any of the 8 sections can be re-run independently after review, without re-running the rest.</li>
+
+              <li><strong>Multi-provider LLM abstraction</strong> — Azure OpenAI, OpenAI, and Claude behind one common adapter interface, swappable via env var.</li>
+
+              <li><strong>Property-based backend testing</strong> (pytest + Hypothesis) — a materially more rigorous QA posture than most portfolio-stage projects.</li>
+
+            </ul>
+
+            <div class="scope-note">Scope note: parallel LLM orchestration, not multi-agent AI — no section reads another's output; no autonomous planning or LLM-driven tool use in the orchestrator.</div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- APP 04 -->
+
+        <div class="app-card">
+
+          <div class="app-head">
+
+            <div>
+
+              <div class="app-num">Application 04</div>
+
+              <h2>Paceline</h2>
+
+              <div class="app-tag">Engagement-health signals engine, for agencies &amp; consultancies</div>
+
+            </div>
+
+            <div class="status-pill proto">Working Prototype</div>
+
+          </div>
+
+          <div class="app-body">
+
+            <div class="stack-row">
+
+              <span class="chip">CloudFront + S3 (SPA)</span>
+
+              <span class="chip">Cognito PKCE</span>
+
+              <span class="chip">API Gateway + Lambda</span>
+
+              <span class="chip">S3 JSON persistence</span>
+
+            </div>
+
+            <p class="app-desc">Computes <strong>EVM-style engagement metrics (CPI/SPI/EAC/PAC)</strong> and fires deterministic signals — revenue at risk, margin erosion, schedule slip, team over-burn, retainer over-service — for firms running multiple client engagements concurrently.</p>
+
+            <ul class="proof-list">
+
+              <li>Fully <strong>AWS-native static SPA</strong> with same-origin <code>/api/*</code> surface backed by API Gateway + Lambda, single JSON-document-per-firm persistence in S3.</li>
+
+              <li>In active development: an evidence panel that traces every fired signal to its driving metric, phase, and team member.</li>
+
+              <li>A grounded <strong>"Ask Pacer" assistant</strong> scoped to answer only from computed evidence — not general-purpose chat.</li>
+
+            </ul>
+
+            <div class="scope-note">Scope note: working prototype in active development — distinguished deliberately from CareerIQ and Delivery Insights (both production).</div>
+
+          </div>
+
+        </div>
+
+
+
+        
+        <!-- APP 05 -->
+        <div class="app-card">
+          <div class="app-head">
+            <div>
+              <div class="app-num">Application 05</div>
+              <h2>Keel Watch</h2>
+              <div class="app-tag">Contract renewal risk agent for SMB agencies — MCP · AWS Bedrock · Evidence-grounded output</div>
+            </div>
+            <div class="status-pill proto">Pilot-Ready · Design Partner Pending</div>
+          </div>
+          <div class="app-body">
+            <div class="stack-row">
+              <span class="chip">Node.js (CommonJS)</span>
+              <span class="chip">AWS Bedrock (Claude)</span>
+              <span class="chip">MCP Server (stdio + HTTP)</span>
+              <span class="chip">pdf-parse</span>
+              <span class="chip">OpenAI-compatible</span>
+              <span class="chip">Azure Container Apps</span>
+              <span class="chip">@modelcontextprotocol/sdk</span>
+            </div>
+            <p class="app-desc">Reads a signed contract (PDF) and a client email thread, determines whether a renewal window is closing on a relationship that’s gone quiet, and delivers <strong>two cited work-products</strong> — a one-page renewal-risk brief and a draft outreach email. <strong>Every factual claim traces back to a specific clause or dated email</strong> via a structured evidence ledger. Nothing sends without human sign-off; low-confidence reads are surfaced, never smoothed over.</p>
+            <ul class="proof-list">
+              <li><strong>Evidence ledger architecture</strong> — every claim in the output cites a <code>sourceRef</code> (contract clause + page, or email date + excerpt); ungrounded assertions are structurally impossible, not just prompted against.</li>
+              <li><strong>MCP tool wrapper</strong> — the entire pipeline is exposed as a callable <code>check_contract_renewal_risk</code> tool so any MCP-compatible AI agent can invoke it mid-conversation, without a human at the CLI.</li>
+              <li><strong>Deliberate standalone architecture</strong> — intentionally decoupled from the enterprise Paceline SignalCore engine (gated on an IP opinion letter); pilot logic is single-purpose, disposable, and independently validated with 33 passing tests.</li>
+              <li><strong>Provider-agnostic LLM layer</strong> — same pipeline runs against AWS Bedrock (default) or OpenAI/Azure OpenAI via a swappable <code>llmClient</code> dependency, selected per-call or via env var.</li>
+              <li><strong>Full feasibility &amp; brand system built</strong> — SMB go-to-market study, pricing model, compliance posture (no auto-send, data isolation, legal-disclaimer requirements), and a KeelAI product family brand identity completed before commercial engagement.</li>
+            </ul>
+            <div class="scope-note">Scope note: pilot-ready pipeline — 33/43 tasks complete, all technical build done. Remaining steps are process (design partner engagement, delivery, debrief). Positioned as the first standalone product in the KeelAI family, not an enterprise-CLM feature.</div>
+          </div>
+        </div>
+
+        <!-- SHARED SERVICE -->
+
+        <div class="app-card dark-card">
+
+          <div class="app-head">
+
+            <div>
+
+              <div class="app-num">Shared Service</div>
+
+              <h2>Investigator Agent — Grounded Recommendation Layer</h2>
+
+              <div class="app-tag">Deployed service backing Paceline and Northline as host apps</div>
+
+            </div>
+
+            <div class="status-pill svc">Deployed Service</div>
+
+          </div>
+
+          <div class="app-body">
+
+            <div class="stack-row">
+
+              <span class="chip">Fastify (Node)</span>
+
+              <span class="chip">AWS App Runner</span>
+
+              <span class="chip">Docker → ECR</span>
+
+              <span class="chip">DynamoDB</span>
+
+              <span class="chip chip-purple">Bedrock / Anthropic / OpenAI / Azure OpenAI</span>
+
+            </div>
+
+            <p class="app-desc">A real tool-calling agent — <strong>not a prompt wrapper</strong>. A bounded reasoning loop (reason → call tool → observe, capped at 3 calls and 20 seconds) decides what evidence to look up before it's allowed to make a recommendation, backed by a circuit breaker and a persisted audit trail.</p>
+
+            <ul class="proof-list">
+
+              <li><strong>Grounding enforced in code</strong> — recommendations that don't cite retrieved tool evidence are rejected and tagged <code>ungrounded-fallback</code>, not just prompted for.</li>
+
+              <li><strong>Two-layer feature-gate governance</strong> between each host app and the agent — independent flags must both be true, so either app degrades gracefully if the agent is disabled.</li>
+
+              <li><strong>Live cross-cloud migration</strong> — moving production traffic from Azure Container Apps to AWS App Runner via Docker → ECR → <code>aws apprunner start-deployment</code> pipeline.</li>
+
+              <li><strong>Cross-language integration</strong> — same 3-tool contract proven against Paceline's JS/Node stack and Northline's Python/FastAPI stack.</li>
+
+              <li><strong>Hands-on IAM/authorization debugging</strong> — diagnosed a live 403-on-write issue traced to an execution-role permission gap.</li>
+
+            </ul>
+
+          </div>
+
+        </div>
+
+
+
+      </div><!-- /apps-grid -->
+
+    </div>
+
+
+
+    <!-- ROLE MAPPING -->
+
+    <div id="roles" class="section" style="padding-top:0;">
+
+      <div class="section-label">Target Roles</div>
+
+      <div class="section-title">How This Maps to the Market</div>
+
+      <div class="section-sub">These builds speak directly to requirements in AI Program Management and Technical PM/TPM roles.</div>
+
+      <div class="role-grid">
+
+        <div class="role-card">
+
+          <h3>🏛️ Amazon — TPM / Principal PM</h3>
+
+          <ul class="role-list">
+
+            <li><strong>Cross-cloud service migration with CI/CD cutover</strong> (Investigator Agent) → "evaluate system designs for scalability, security, operational excellence"</li>
+
+            <li><strong>Feature-flag governance</strong> between two independently-deployed services → real integration-platform evidence</li>
+
+            <li><strong>Live IAM/authorization debugging</strong> (403 diagnosis) → concrete auth/rate-limiting/monitoring evidence</li>
+
+          </ul>
+
+        </div>
+
+        <div class="role-card">
+
+          <h3>🔵 Oracle — Principal TPM / Sr. Manager</h3>
+
+          <ul class="role-list">
+
+            <li><strong>Multi-provider LLM adapter pattern</strong> (Northline) + configurable Bedrock/Anthropic/OpenAI (Investigator Agent) → vendor-agnostic platform thinking</li>
+
+            <li><strong>Property-based backend testing</strong> (pytest + Hypothesis) → QA discipline above typical prototype-stage work</li>
+
+            <li><strong>Shared-core/adapter architecture</strong> serving two domains → reuse across product lines</li>
+
+          </ul>
+
+        </div>
+
+        <div class="role-card">
+
+          <h3>🤖 AI Program / Delivery Manager</h3>
+
+          <ul class="role-list">
+
+            <li><strong>Grounded agentic reasoning loop</strong> with enforced evidence citation → understands AI safety and trust from implementation, not theory</li>
+
+            <li><strong>Multi-methodology delivery analytics</strong> (Delivery Insights) → delivery credibility across Scrum, SAFe, Kanban, PMI</li>
+
+            <li><strong>Human-in-the-loop design</strong> (Northline) → practical understanding of where humans and AI should hand off</li>
+
+          </ul>
+
+        </div>
+
+        <div class="role-card">
+
+          <h3>🏢 Consulting / Platform PM Roles</h3>
+
+          <ul class="role-list">
+
+            <li><strong>Builds tools the team actually needs</strong> — CareerIQ, Delivery Insights, and Northline all exist from real use cases</li>
+
+            <li><strong>Zero-data-egress architecture</strong> (Delivery Insights) → understands data governance without needing it explained</li>
+
+            <li><strong>Serverless-first, cost-conscious design</strong> (Paceline, CareerIQ) → delivery manager who thinks about total cost of ownership</li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- ABOUT -->
+
+    <div id="about" class="section" style="padding-top:0; padding-bottom: 0;">
+
+      <div class="section-label">About</div>
+
+      <div class="section-title">The Full Picture</div>
+
+      <div class="section-sub">The builds are one part of a 15-year delivery track record.</div>
+
+      <div class="context-block">
+
+        <h4>🎯 Positioning</h4>
+
+        <p>I'm a delivery manager who uses AI tools to build and has real hands-on experience with AI and cloud environments. The portfolio is not a career change to engineering — it's evidence of a delivery leader who closes the gap between "I manage engineers" and "I understand what the engineers actually built." That distinction matters for AI Program Management, AI Delivery, and technical PM roles at scale.</p>
+
+      </div>
+
+      <div class="context-block" style="border-left-color: var(--amber); border-color: #F5C99A; background: var(--amber-lite);">
+
+        <h4 style="color:var(--amber);">📋 Core Credentials</h4>
+
+        <p><strong>MBA · PMP · SAFe LPM · AWS Certified Cloud Practitioner · CSPO · CSM</strong><br>
+
+        15+ years in enterprise technology consulting delivery | $20M+ program portfolio | Cross-functional team leadership (14 teams) | Account growth through delivery ($105K → $265K, closed 22% under budget)</p>
+
+      </div>
+
+      <div style="text-align:center; margin-top:36px; margin-bottom:8px;">
+
+        <p style="font-size:11px;color:var(--light);line-height:1.7;">All technical claims verified against source code, infrastructure configs, or live deployment logs as of July 2026.<br>Status labels (Production / Active Development / Working Prototype) are accurate as of this date.</p>
+
+      </div>
+
+    </div>
+
+
+
+  </div><!-- /section -->
+
+</div><!-- /container -->
+
+
+
+<!-- FOOTER -->
+
+<footer>
+
+  <div class="footer-name">Christopher McCourt</div>
+
+  <div class="footer-sub">MBA · PMP · SAFe LPM · AWS CCP · Nashville, TN</div>
+
+  <div class="footer-links">
+
+    <a href="mailto:chris@cmccourt.net"><i class="fa-solid fa-envelope"></i> chris@cmccourt.net</a>
+
+    <a href="https://linkedin.com/in/cmccourt" target="_blank"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/cmccourt</a>
+
+    <a href="https://github.com/chrismc89" target="_blank"><i class="fa-brands fa-github"></i> github.com/chrismc89</a>
+
+  </div>
+
+  <div class="copyright">© 2026 Christopher McCourt · Built and deployed solo · Last updated July 2026</div>
+
+</footer>
+
+
+
+
+
+
+
+</body></html>
