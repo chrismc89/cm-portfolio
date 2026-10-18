@@ -350,18 +350,25 @@ footer .copyright { margin-top: 20px; font-size: 10.5px; color: #334155; }
 </div>
 </div>
 
-<!-- CAREERIQ -->
+<!-- VERABLE (formerly CareerIQ) -->
 <div class="app-card">
 <div class="app-head">
 <div>
 <div class="app-num">Application 01</div>
-<h2>CareerIQ</h2>
-<div class="app-tag">Personalized AI career-intelligence web app</div>
+<h2>Verable</h2>
+<div class="app-tag">Verable <span style="color:var(--light);">(formerly CareerIQ)</span> — personalized AI career-intelligence platform</div>
 </div>
 <div class="status-pill prod">Production · Deployed</div>
 </div>
 <div class="app-body">
 <div class="plain-lede">A private AI career-intelligence app: résumé fit/gap scoring and tailoring, company research, application strategy, and interview prep. Built on <strong>AWS serverless with a live Claude integration and invite-only sign-in</strong>. Production.</div>
+<div class="shot-row shot-row-single">
+<a class="shot-link" href="javascript:void(0)" onclick="openCarousel('verableCarousel',0)"><figure class="shot shot-thumb">
+<img src="/verable/verable-01-problem.png" alt="Verable (formerly CareerIQ) — the problem: job searching is repetitive, scattered and generic" loading="lazy"/>
+<figcaption>A four-part walkthrough — Problem → Solution (one profile, four chained AI tools) → Architecture → Benefits. <em>Branded Verable; invite-only, synthetic demo data.</em></figcaption>
+</figure></a>
+</div>
+<div class="shot-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Click to open the walkthrough</div>
 <details>
 <summary class="reveal-tech"><span class="chev">▸</span> Technical detail</summary>
 <div class="stack-row">
@@ -427,7 +434,7 @@ footer .copyright { margin-top: 20px; font-size: 10.5px; color: #334155; }
 <div class="app-body">
 <div class="plain-lede">Margin intelligence for consultancies and agencies. It turns the timesheet and sprint data a firm already has into <strong>earned-value health signals, a prioritized morning brief, and dollar-denominated forecasts</strong> — so a delivery lead sees which engagements are losing margin, and why, before it's too late to fix.</div>
 <div class="shot-row shot-row-single">
-<a class="shot-link" href="javascript:void(0)" onclick="openCarousel(0)"><figure class="shot shot-thumb">
+<a class="shot-link" href="javascript:void(0)" onclick="openCarousel('paceCarousel',0)"><figure class="shot shot-thumb">
 <img src="/paceline/paceline-01-connect.png" alt="Paceline product walkthrough — Connect, Morning Brief, Portfolio, Drill-down, Ask Pacer, Share — with EVM metrics" loading="lazy"/>
 <figcaption>A six-screen walkthrough — Connect → Morning Brief → Portfolio → Drill-down → Ask Pacer → Share — with earned-value metrics (CPI/SPI/PAC/EAC) per engagement. <em>Screens captured from a bundled demo dataset (synthetic data); working prototype.</em></figcaption>
 </figure></a>
@@ -447,7 +454,7 @@ footer .copyright { margin-top: 20px; font-size: 10.5px; color: #334155; }
 <li><strong>Four methodologies scored natively</strong> — phase-gate, hybrid EV, Scrum, and Kanban, each with its own risk vocabulary.</li>
 <li><strong>Grounded "Ask Pacer" assistant</strong> — scoped to answer only from computed evidence, not general-purpose chat; an evidence panel traces every fired signal to its driving metric, phase, and team member.</li>
 </ul>
-<div class="scope-note">Scope note: working prototype on a synthetic demo dataset — deliberately distinguished from the production apps (CareerIQ, Delivery Insights). Enterprise SignalCore engine is decoupled and gated on an IP opinion letter.</div>
+<div class="scope-note">Scope note: working prototype on a synthetic demo dataset — deliberately distinguished from the production apps (Verable, Delivery Insights). Enterprise SignalCore engine is decoupled and gated on an IP opinion letter.</div>
 </details>
 </div>
 </div>
@@ -547,8 +554,8 @@ footer .copyright { margin-top: 20px; font-size: 10.5px; color: #334155; }
 <a id="lb-tools" class="lightbox" href="#_"><span class="lightbox-close">&times;</span><img src="/pm-agent-tools-infographic.png" alt="PM Agent tool catalog — enlarged"/></a>
 <!-- Paceline carousel modal -->
 <div class="cr-modal" id="paceCarousel" role="dialog" aria-modal="true" aria-label="Paceline walkthrough">
-<button class="cr-close" onclick="closeCarousel()" aria-label="Close">&times;</button>
-<button class="cr-nav cr-prev" onclick="moveCarousel(-1)" aria-label="Previous">&#10094;</button>
+<button class="cr-close" onclick="closeCarousel('paceCarousel')" aria-label="Close">&times;</button>
+<button class="cr-nav cr-prev" onclick="moveCarousel('paceCarousel',-1)" aria-label="Previous">&#10094;</button>
 <div class="cr-stage" id="crStage">
 <figure class="cr-slide" data-idx="0"><img src="/paceline/paceline-01-connect.png" alt="Paceline — Plug in the tools you already use" loading="lazy"/><figcaption><span class="cr-step">1 / 7</span> <strong>Connect</strong> — Plug in the tools you already use</figcaption></figure>
 <figure class="cr-slide" data-idx="1"><img src="/paceline/paceline-02-morning-brief.png" alt="Paceline — Start the day knowing what needs you" loading="lazy"/><figcaption><span class="cr-step">2 / 7</span> <strong>Morning Brief</strong> — Start the day knowing what needs you</figcaption></figure>
@@ -558,26 +565,48 @@ footer .copyright { margin-top: 20px; font-size: 10.5px; color: #334155; }
 <figure class="cr-slide" data-idx="5"><img src="/paceline/paceline-06-share.png" alt="Paceline — Tell clients and leaders the right story" loading="lazy"/><figcaption><span class="cr-step">6 / 7</span> <strong>Share</strong> — Tell clients and leaders the right story</figcaption></figure>
 <figure class="cr-slide" data-idx="6"><img src="/paceline/paceline-07-summary.png" alt="Paceline — How each engagement is scored — and what the firm gets" loading="lazy"/><figcaption><span class="cr-step">7 / 7</span> <strong>Scored & Outcomes</strong> — How each engagement is scored — and what the firm gets</figcaption></figure>
 </div>
-<button class="cr-nav cr-next" onclick="moveCarousel(1)" aria-label="Next">&#10095;</button>
-<div class="cr-dots"><button class="cr-dot" data-idx="0" onclick="goCarousel(0)" aria-label="Go to slide 1"></button><button class="cr-dot" data-idx="1" onclick="goCarousel(1)" aria-label="Go to slide 2"></button><button class="cr-dot" data-idx="2" onclick="goCarousel(2)" aria-label="Go to slide 3"></button><button class="cr-dot" data-idx="3" onclick="goCarousel(3)" aria-label="Go to slide 4"></button><button class="cr-dot" data-idx="4" onclick="goCarousel(4)" aria-label="Go to slide 5"></button><button class="cr-dot" data-idx="5" onclick="goCarousel(5)" aria-label="Go to slide 6"></button><button class="cr-dot" data-idx="6" onclick="goCarousel(6)" aria-label="Go to slide 7"></button></div>
+<button class="cr-nav cr-next" onclick="moveCarousel('paceCarousel',1)" aria-label="Next">&#10095;</button>
+<div class="cr-dots"><button class="cr-dot" data-idx="0" onclick="goCarousel('paceCarousel',0)" aria-label="Go to slide 1"></button><button class="cr-dot" data-idx="1" onclick="goCarousel('paceCarousel',1)" aria-label="Go to slide 2"></button><button class="cr-dot" data-idx="2" onclick="goCarousel('paceCarousel',2)" aria-label="Go to slide 3"></button><button class="cr-dot" data-idx="3" onclick="goCarousel('paceCarousel',3)" aria-label="Go to slide 4"></button><button class="cr-dot" data-idx="4" onclick="goCarousel('paceCarousel',4)" aria-label="Go to slide 5"></button><button class="cr-dot" data-idx="5" onclick="goCarousel('paceCarousel',5)" aria-label="Go to slide 6"></button><button class="cr-dot" data-idx="6" onclick="goCarousel('paceCarousel',6)" aria-label="Go to slide 7"></button></div>
 </div>
 
+<!-- Verable carousel modal -->
+<div class="cr-modal" id="verableCarousel" role="dialog" aria-modal="true" aria-label="Verable walkthrough">
+<button class="cr-close" onclick="closeCarousel('verableCarousel')" aria-label="Close">&times;</button>
+<button class="cr-nav cr-prev" onclick="moveCarousel('verableCarousel',-1)" aria-label="Previous">&#10094;</button>
+<div class="cr-stage">
+<figure class="cr-slide" data-idx="0"><img src="/verable/verable-01-problem.png" alt="Verable — Job searching is repetitive, scattered and generic" loading="lazy"/><figcaption><span class="cr-step">1 / 4</span> <strong>The Problem</strong> — Job searching is repetitive, scattered and generic</figcaption></figure>
+<figure class="cr-slide" data-idx="1"><img src="/verable/verable-02-solution.png" alt="Verable — One profile, four AI tools, each feeding the next" loading="lazy"/><figcaption><span class="cr-step">2 / 4</span> <strong>The Solution</strong> — One profile, four AI tools, each feeding the next</figcaption></figure>
+<figure class="cr-slide" data-idx="2"><img src="/verable/verable-03-architecture.png" alt="Verable — Simple and serverless on AWS" loading="lazy"/><figcaption><span class="cr-step">3 / 4</span> <strong>Architecture</strong> — Simple and serverless on AWS</figcaption></figure>
+<figure class="cr-slide" data-idx="3"><img src="/verable/verable-04-benefits.png" alt="Verable — Better applications with less effort" loading="lazy"/><figcaption><span class="cr-step">4 / 4</span> <strong>Benefits</strong> — Better applications with less effort</figcaption></figure>
+</div>
+<button class="cr-nav cr-next" onclick="moveCarousel('verableCarousel',1)" aria-label="Next">&#10095;</button>
+<div class="cr-dots"><button class="cr-dot" data-idx="0" onclick="goCarousel('verableCarousel',0)" aria-label="Go to slide 1"></button><button class="cr-dot" data-idx="1" onclick="goCarousel('verableCarousel',1)" aria-label="Go to slide 2"></button><button class="cr-dot" data-idx="2" onclick="goCarousel('verableCarousel',2)" aria-label="Go to slide 3"></button><button class="cr-dot" data-idx="3" onclick="goCarousel('verableCarousel',3)" aria-label="Go to slide 4"></button></div>
+</div>
 <script>
 (function(){
-  var cur = 0, total = 7, modal, slides, dots;
-  function init(){ modal = document.getElementById('paceCarousel'); slides = modal.querySelectorAll('.cr-slide'); dots = modal.querySelectorAll('.cr-dot'); }
-  function render(){ for (var i=0;i<slides.length;i++){ slides[i].classList.toggle('active', i===cur); dots[i].classList.toggle('active', i===cur); } }
-  window.openCarousel = function(i){ if(!modal) init(); cur = i||0; modal.classList.add('open'); document.body.style.overflow='hidden'; render(); };
-  window.closeCarousel = function(){ if(modal){ modal.classList.remove('open'); document.body.style.overflow=''; } };
-  window.moveCarousel = function(d){ cur = (cur + d + total) % total; render(); };
-  window.goCarousel = function(i){ cur = i; render(); };
+  var state = {};  // id -> {cur, total, modal, slides, dots}
+  function init(id){
+    var modal = document.getElementById(id);
+    var slides = modal.querySelectorAll('.cr-slide');
+    var dots = modal.querySelectorAll('.cr-dot');
+    state[id] = {cur:0, total:slides.length, modal:modal, slides:slides, dots:dots};
+    return state[id];
+  }
+  function render(s){ for (var i=0;i<s.slides.length;i++){ s.slides[i].classList.toggle('active', i===s.cur); if(s.dots[i]) s.dots[i].classList.toggle('active', i===s.cur); } }
+  function openId(id){ for(var k in state){ if(state[k].modal.classList.contains('open')) closeId(k); } }
+  function closeId(id){ var s=state[id]; if(s){ s.modal.classList.remove('open'); document.body.style.overflow=''; } }
+  function current(){ for(var k in state){ if(state[k] && state[k].modal.classList.contains('open')) return state[k]; } return null; }
+  window.openCarousel = function(id, i){ var s = state[id] || init(id); s.cur = i||0; s.modal.classList.add('open'); document.body.style.overflow='hidden'; render(s); };
+  window.closeCarousel = function(id){ closeId(id); };
+  window.moveCarousel = function(id, d){ var s=state[id]; if(!s) return; s.cur=(s.cur+d+s.total)%s.total; render(s); };
+  window.goCarousel = function(id, i){ var s=state[id]; if(!s) return; s.cur=i; render(s); };
   document.addEventListener('keydown', function(e){
-    if(!modal || !modal.classList.contains('open')) return;
-    if(e.key==='Escape') closeCarousel();
-    else if(e.key==='ArrowRight') moveCarousel(1);
-    else if(e.key==='ArrowLeft') moveCarousel(-1);
+    var s = current(); if(!s) return;
+    if(e.key==='Escape') closeId(s.modal.id);
+    else if(e.key==='ArrowRight') window.moveCarousel(s.modal.id, 1);
+    else if(e.key==='ArrowLeft') window.moveCarousel(s.modal.id, -1);
   });
-  document.addEventListener('click', function(e){ if(modal && e.target===modal) closeCarousel(); });
+  document.addEventListener('click', function(e){ var s=current(); if(s && e.target===s.modal) closeId(s.modal.id); });
 })();
 </script>
 </body>
