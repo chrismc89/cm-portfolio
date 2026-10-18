@@ -1,1281 +1,584 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Christopher McCourt — AI & Cloud Development Portfolio</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Christopher McCourt — Senior Program Manager | AI &amp; Cloud Portfolio</title>
+<!-- Open Graph / link-preview metadata (new) -->
+<meta name="description" content="Senior Program Manager with 15+ years in healthcare and regulated-industry delivery — and a working GitHub history of production AI/cloud builds. Not a pivot to engineering; a PM who understands what he manages."/>
+<meta property="og:title" content="Christopher McCourt — Senior Program Manager"/>
+<meta property="og:description" content="A PM who builds what he'd otherwise just manage. 3 production AI/cloud apps, verified against source and live deployments."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://portfolio.cmccourt.net/"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
 <style>
-
-  :root {
-
-    --teal:        #006B6B;
-
-    --teal-mid:    #009090;
-
-    --teal-lite:   #E0F4F4;
-
-    --teal-dark:   #004F4F;
-
-    --amber:       #C85A00;
-
-    --amber-lite:  #FFF3E0;
-
-    --green:       #15803D;
-
-    --green-lite:  #F0FDF4;
-
-    --slate:       #1E293B;
-
-    --mid:         #475569;
-
-    --light:       #94A3B8;
-
-    --bg:          #F0F4F8;
-
-    --surface:     #FFFFFF;
-
-    --border:      #E2E8F0;
-
-    --border-mid:  #CBD5E1;
-
-    --navy:        #0F172A;
-
-    --radius:      10px;
-
-  }
-
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  html { scroll-behavior: smooth; }
-
-
-
-  body {
-
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-
-    background: var(--bg);
-
-    color: var(--slate);
-
-    line-height: 1.6;
-
-  }
-
-
-
-  /* ── NAV ── */
-
-  nav {
-
-    position: sticky; top: 0; z-index: 100;
-
-    background: var(--navy);
-
-    border-bottom: 2px solid var(--teal);
-
-    padding: 0 32px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    height: 56px;
-
-  }
-
-  .nav-brand {
-
-    font-size: 13px; font-weight: 700;
-
-    color: #E2E8F0;
-
-    letter-spacing: .5px;
-
-  }
-
-  .nav-brand span { color: var(--teal-mid); }
-
-  .nav-links { display: flex; gap: 6px; }
-
-  .nav-links a {
-
-    color: #94A3B8; font-size: 12px; font-weight: 500;
-
-    text-decoration: none; padding: 6px 12px; border-radius: 6px;
-
-    transition: all .15s ease;
-
-    letter-spacing: .3px;
-
-  }
-
-  .nav-links a:hover { color: #E2E8F0; background: rgba(255,255,255,.08); }
-
-  .nav-cta {
-
-    background: var(--teal) !important;
-
-    color: white !important;
-
-  }
-
-  .nav-cta:hover { background: var(--teal-mid) !important; }
-
-
-
-  /* ── HERO ── */
-
-  .hero {
-
-    background: linear-gradient(135deg, var(--navy) 0%, #073B3B 100%);
-
-    padding: 72px 32px 60px;
-
-    text-align: center;
-
-  }
-
-  .hero-eyebrow {
-
-    display: inline-block;
-
-    font-size: 10.5px; font-weight: 700; letter-spacing: 2px;
-
-    text-transform: uppercase;
-
-    color: var(--teal-mid);
-
-    margin-bottom: 16px;
-
-  }
-
-  .hero h1 {
-
-    font-size: clamp(28px, 5vw, 46px);
-
-    font-weight: 800;
-
-    color: #F1F5F9;
-
-    line-height: 1.15;
-
-    max-width: 780px;
-
-    margin: 0 auto 12px;
-
-  }
-
-  .hero h1 em { color: var(--teal-mid); font-style: normal; }
-
-  .hero-sub {
-
-    font-size: 16px; color: #94A3B8;
-
-    max-width: 580px; margin: 0 auto 28px;
-
-  }
-
-  .hero-badges { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px; }
-
-  .hero-badge {
-
-    font-size: 11px; font-weight: 600; letter-spacing: .8px;
-
-    text-transform: uppercase;
-
-    padding: 6px 14px; border-radius: 20px;
-
-    border: 1.5px solid rgba(255,255,255,.15);
-
-    color: #CBD5E1;
-
-  }
-
-  .hero-badge.teal { border-color: var(--teal-mid); color: var(--teal-mid); }
-
-  .hero-badge.amber { border-color: #E97316; color: #FB923C; }
-
-  .hero-cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-
-  .btn {
-
-    display: inline-flex; align-items: center; gap: 8px;
-
-    padding: 11px 22px; border-radius: 8px;
-
-    font-size: 13px; font-weight: 600; text-decoration: none;
-
-    transition: all .15s ease; cursor: pointer;
-
-    border: none;
-
-  }
-
-  .btn-primary { background: var(--teal); color: white; }
-
-  .btn-primary:hover { background: var(--teal-mid); transform: translateY(-1px); box-shadow: 0 4px 12px rgba(0,107,107,.4); }
-
-  .btn-ghost { background: rgba(255,255,255,.08); color: #CBD5E1; border: 1.5px solid rgba(255,255,255,.15); }
-
-  .btn-ghost:hover { background: rgba(255,255,255,.14); color: white; }
-
-
-
-  /* ── LAYOUT ── */
-
-  .container { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
-
-  .section { padding: 56px 0; }
-
-  .section-label {
-
-    font-size: 10.5px; font-weight: 700; letter-spacing: 2px;
-
-    text-transform: uppercase; color: var(--teal);
-
-    margin-bottom: 8px;
-
-  }
-
-  .section-title { font-size: 22px; font-weight: 800; color: var(--slate); margin-bottom: 6px; }
-
-  .section-sub { font-size: 14px; color: var(--mid); margin-bottom: 36px; max-width: 600px; }
-
-
-
-  /* ── STATS ROW ── */
-
-  .stats-row {
-
-    display: grid; grid-template-columns: repeat(4, 1fr);
-
-    gap: 16px; margin-bottom: 56px;
-
-  }
-
-  .stat-card {
-
-    background: var(--surface); border: 1.5px solid var(--border);
-
-    border-radius: var(--radius); padding: 20px;
-
-    text-align: center;
-
-  }
-
-  .stat-num { font-size: 30px; font-weight: 800; color: var(--teal); line-height: 1; }
-
-  .stat-label { font-size: 11.5px; color: var(--mid); margin-top: 6px; }
-
-
-
-  /* ── APP CARDS ── */
-
-  .apps-grid { display: flex; flex-direction: column; gap: 20px; }
-
-  .app-card {
-
-    background: var(--surface); border: 1.5px solid var(--border);
-
-    border-radius: var(--radius); overflow: hidden;
-
-    transition: box-shadow .2s ease;
-
-  }
-
-  .app-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,.1); }
-
-
-
-  .app-head {
-
-    padding: 16px 22px;
-
-    display: flex; align-items: center; justify-content: space-between; gap: 16px;
-
-    border-bottom: 1.5px solid var(--border);
-
-    background: #FAFCFC;
-
-  }
-
-  .app-num {
-
-    font-size: 10px; font-weight: 700; letter-spacing: 1.5px;
-
-    text-transform: uppercase; color: var(--light);
-
-    margin-bottom: 2px;
-
-  }
-
-  .app-head h2 { font-size: 18px; font-weight: 800; color: var(--slate); }
-
-  .app-tag { font-size: 12.5px; color: var(--mid); margin-top: 2px; }
-
-
-
-  .status-pill {
-
-    font-size: 10px; font-weight: 700; letter-spacing: .8px;
-
-    text-transform: uppercase; padding: 5px 12px; border-radius: 20px;
-
-    white-space: nowrap; flex-shrink: 0;
-
-  }
-
-  .prod  { background: #DCFCE7; color: var(--green); }
-
-  .dev   { background: var(--amber-lite); color: var(--amber); }
-
-  .proto { background: #F1F5F9; color: var(--mid); }
-
-  .svc   { background: #EDE9FE; color: #6D28D9; }
-
-
-
-  .app-body { padding: 20px 22px; }
-
-  .stack-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
-
-  .chip {
-
-    background: var(--teal-lite); color: var(--teal);
-
-    font-size: 10.5px; font-weight: 600;
-
-    padding: 4px 10px; border-radius: 5px;
-
-  }
-
-  .chip-purple { background: #EDE9FE; color: #6D28D9; }
-
-
-
-  .app-desc {
-
-    font-size: 13.5px; color: var(--mid); line-height: 1.65;
-
-    margin-bottom: 14px;
-
-  }
-
-  .app-desc strong { color: var(--slate); }
-
-
-
-  .proof-list { list-style: none; padding: 0; }
-
-  .proof-list li {
-
-    font-size: 12.5px; color: var(--mid);
-
-    padding: 7px 0 7px 18px; border-bottom: 1px dashed var(--border);
-
-    line-height: 1.55; position: relative;
-
-  }
-
-  .proof-list li:last-child { border-bottom: none; }
-
-  .proof-list li::before { content: "▸"; color: var(--teal); font-weight: 700; position: absolute; left: 0; }
-
-  .proof-list li strong { color: var(--slate); }
-
-
-
-  .scope-note {
-
-    margin-top: 12px; padding-top: 10px;
-
-    border-top: 1px solid var(--border);
-
-    font-size: 11px; color: var(--light); font-style: italic; line-height: 1.55;
-
-  }
-
-
-
-  /* shared-service card dark variant */
-
-  .app-card.dark-card {
-
-    background: linear-gradient(135deg, var(--navy) 0%, #073B3B 100%);
-
-    border-color: #1E3A3A;
-
-  }
-
-  .dark-card .app-head { background: rgba(255,255,255,.04); border-color: rgba(255,255,255,.1); }
-
-  .dark-card .app-num { color: #475569; }
-
-  .dark-card .app-head h2 { color: #F1F5F9; }
-
-  .dark-card .app-tag { color: #64748B; }
-
-  .dark-card .chip { background: rgba(0,144,144,.3); color: #D5F5F5; }
-
-  .dark-card .app-desc { color: #CBD5E1; }
-
-  .dark-card .app-desc strong { color: #F1F5F9; }
-
-  .dark-card .proof-list li { color: #CBD5E1; border-color: #1E3A3A; }
-
-  .dark-card .proof-list li strong { color: #F1F5F9; }
-
-  .dark-card .proof-list li::before { color: var(--teal-mid); }
-
-  .dark-card .scope-note { color: #475569; border-color: #1E3A3A; }
-
-
-
-  /* ── ROLE MAPPING ── */
-
-  .role-grid {
-
-    display: grid; grid-template-columns: 1fr 1fr;
-
-    gap: 16px;
-
-  }
-
-  .role-card {
-
-    background: var(--surface); border: 1.5px solid var(--border);
-
-    border-radius: var(--radius); padding: 20px;
-
-  }
-
-  .role-card h3 {
-
-    font-size: 13px; font-weight: 700; text-transform: uppercase;
-
-    letter-spacing: .8px; color: var(--teal); margin-bottom: 12px;
-
-  }
-
-  .role-list { list-style: none; padding: 0; }
-
-  .role-list li {
-
-    font-size: 12.5px; color: var(--mid);
-
-    padding: 6px 0 6px 16px; border-bottom: 1px dashed var(--border);
-
-    line-height: 1.5; position: relative;
-
-  }
-
-  .role-list li:last-child { border-bottom: none; }
-
-  .role-list li::before { content: "•"; color: var(--teal); position: absolute; left: 0; font-weight: 700; }
-
-  .role-list li strong { color: var(--slate); }
-
-
-
-  /* ── ABOUT / CONTEXT ── */
-
-  .context-block {
-
-    background: var(--teal-lite); border: 1.5px solid #99DADA;
-
-    border-left: 5px solid var(--teal);
-
-    border-radius: var(--radius); padding: 18px 22px;
-
-    margin-bottom: 20px;
-
-  }
-
-  .context-block h4 {
-
-    font-size: 10.5px; font-weight: 700; text-transform: uppercase;
-
-    letter-spacing: 1.2px; color: var(--teal); margin-bottom: 6px;
-
-  }
-
-  .context-block p { font-size: 13.5px; color: var(--mid); line-height: 1.65; }
-
-  .context-block p strong { color: var(--slate); }
-
-
-
-  /* ── FOOTER ── */
-
-  footer {
-
-    background: var(--navy);
-
-    border-top: 2px solid var(--teal);
-
-    padding: 36px 32px;
-
-    text-align: center;
-
-  }
-
-  footer .footer-name {
-
-    font-size: 16px; font-weight: 800; color: #E2E8F0; margin-bottom: 6px;
-
-  }
-
-  footer .footer-sub { font-size: 12.5px; color: #64748B; margin-bottom: 18px; }
-
-  footer .footer-links { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-
-  footer a {
-
-    font-size: 12.5px; color: var(--teal-mid);
-
-    text-decoration: none;
-
-    display: inline-flex; align-items: center; gap: 6px;
-
-  }
-
-  footer a:hover { color: #5EEAD4; }
-
-  footer .copyright { margin-top: 20px; font-size: 10.5px; color: #334155; }
-
-
-
-  /* ── RESPONSIVE ── */
-
-  @media (max-width: 680px) {
-
-    .stats-row { grid-template-columns: 1fr 1fr; }
-
-    .role-grid { grid-template-columns: 1fr; }
-
-    nav { padding: 0 16px; }
-
-    .nav-links { display: none; }
-
-    .hero { padding: 48px 16px 40px; }
-
-  }
-
+:root { --teal: #006B6B; --teal-mid: #009090; --teal-lite: #E0F4F4; --teal-dark: #004F4F; --amber: #C85A00; --amber-lite: #FFF3E0; --green: #15803D; --green-lite: #F0FDF4; --slate: #1E293B; --mid: #475569; --light: #94A3B8; --bg: #F0F4F8; --surface: #FFFFFF; --border: #E2E8F0; --border-mid: #CBD5E1; --navy: #0F172A; --radius: 10px; }
+*, ::before, ::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--bg); color: var(--slate); line-height: 1.6; }
+nav { position: sticky; top: 0; z-index: 100; background: var(--navy); border-bottom: 2px solid var(--teal); padding: 0 32px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+.nav-brand { font-size: 13px; font-weight: 700; color: #E2E8F0; letter-spacing: 0.5px; }
+.nav-brand span { color: var(--teal-mid); }
+.nav-links { display: flex; gap: 6px; align-items: center; }
+.nav-links a { color: #94A3B8; font-size: 12px; font-weight: 500; text-decoration: none; padding: 6px 12px; border-radius: 6px; transition: 0.15s; letter-spacing: 0.3px; }
+.nav-links a:hover { color: #E2E8F0; background: rgba(255,255,255,0.08); }
+.nav-cta { background: var(--teal) !important; color: white !important; }
+.nav-cta:hover { background: var(--teal-mid) !important; }
+.nav-resume { border: 1px solid var(--teal-mid) !important; color: var(--teal-mid) !important; }
+.nav-resume:hover { background: rgba(0,144,144,0.15) !important; color: #E2E8F0 !important; }
+.hero { background: linear-gradient(135deg, var(--navy) 0%, #073B3B 100%); padding: 72px 32px 60px; text-align: center; }
+.hero-eyebrow { display: inline-block; font-size: 10.5px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-mid); margin-bottom: 16px; }
+.hero h1 { font-size: clamp(28px, 5vw, 46px); font-weight: 800; color: #F1F5F9; line-height: 1.15; max-width: 820px; margin: 0 auto 12px; }
+.hero h1 em { color: var(--teal-mid); font-style: normal; }
+.hero-sub { font-size: 16px; color: #94A3B8; max-width: 620px; margin: 0 auto 28px; }
+.hero-badges { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px; }
+.hero-badge { font-size: 11px; font-weight: 600; letter-spacing: 0.8px; text-transform: uppercase; padding: 6px 14px; border-radius: 20px; border: 1.5px solid rgba(255,255,255,0.15); color: #CBD5E1; }
+.hero-badge.teal { border-color: var(--teal-mid); color: var(--teal-mid); }
+.hero-badge.amber { border-color: #E97316; color: #FB923C; }
+.hero-cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 22px; border-radius: 8px; font-size: 13px; font-weight: 600; text-decoration: none; transition: 0.15s; cursor: pointer; border: none; }
+.btn-primary { background: var(--teal); color: white; }
+.btn-primary:hover { background: var(--teal-mid); transform: translateY(-1px); box-shadow: rgba(0,107,107,0.4) 0 4px 12px; }
+.btn-resume { background: var(--amber); color: white; }
+.btn-resume:hover { background: #E06A10; transform: translateY(-1px); box-shadow: rgba(200,90,0,0.4) 0 4px 12px; }
+.btn-ghost { background: rgba(255,255,255,0.08); color: #CBD5E1; border: 1.5px solid rgba(255,255,255,0.15); }
+.btn-ghost:hover { background: rgba(255,255,255,0.14); color: white; }
+.container { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
+.section { padding: 56px 0; }
+.section-label { font-size: 10.5px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal); margin-bottom: 8px; }
+.section-title { font-size: 22px; font-weight: 800; color: var(--slate); margin-bottom: 6px; }
+.section-sub { font-size: 14px; color: var(--mid); margin-bottom: 36px; max-width: 640px; }
+.stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 40px; }
+.stat-card { background: var(--surface); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 20px; text-align: center; }
+.stat-num { font-size: 30px; font-weight: 800; color: var(--teal); line-height: 1; }
+.stat-label { font-size: 11.5px; color: var(--mid); margin-top: 6px; }
+.apps-grid { display: flex; flex-direction: column; gap: 20px; }
+.app-card { background: var(--surface); border: 1.5px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: box-shadow 0.2s; }
+.app-card:hover { box-shadow: rgba(0,0,0,0.1) 0 6px 24px; }
+.app-head { padding: 16px 22px; display: flex; align-items: center; justify-content: space-between; gap: 16px; border-bottom: 1.5px solid var(--border); background: #FAFCFC; }
+.app-num { font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--light); margin-bottom: 2px; }
+.app-head h2 { font-size: 18px; font-weight: 800; color: var(--slate); }
+.app-tag { font-size: 12.5px; color: var(--mid); margin-top: 2px; }
+.status-pill { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; padding: 5px 12px; border-radius: 20px; white-space: nowrap; flex-shrink: 0; }
+.prod { background: #DCFCE7; color: var(--green); }
+.dev { background: var(--amber-lite); color: var(--amber); }
+.proto { background: #F1F5F9; color: var(--mid); }
+.svc { background: #EDE9FE; color: #6D28D9; }
+.app-body { padding: 20px 22px; }
+/* NEW: plain-English summary layer that sits above the technical bullets */
+.plain-lede { font-size: 14.5px; color: var(--slate); line-height: 1.6; margin-bottom: 14px; padding: 12px 16px; background: var(--teal-lite); border-left: 4px solid var(--teal-mid); border-radius: 6px; }
+.dark-card .plain-lede { background: rgba(0,144,144,0.18); border-left-color: var(--teal-mid); color: #E2E8F0; }
+.reveal-tech { font-size: 11px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; color: var(--teal); cursor: pointer; user-select: none; display: inline-flex; align-items: center; gap: 6px; margin-bottom: 4px; background: none; border: none; padding: 4px 0; }
+.dark-card .reveal-tech { color: var(--teal-mid); }
+.reveal-tech .chev { transition: transform 0.2s; }
+details[open] .reveal-tech .chev { transform: rotate(90deg); }
+details > summary { list-style: none; }
+details > summary::-webkit-details-marker { display: none; }
+.stack-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 12px 0 14px; }
+.chip { background: var(--teal-lite); color: var(--teal); font-size: 10.5px; font-weight: 600; padding: 4px 10px; border-radius: 5px; }
+.chip-purple { background: #EDE9FE; color: #6D28D9; }
+.app-desc { font-size: 13.5px; color: var(--mid); line-height: 1.65; margin-bottom: 14px; }
+.app-desc strong { color: var(--slate); }
+.proof-list { list-style: none; padding: 0; }
+.proof-list li { font-size: 12.5px; color: var(--mid); padding: 7px 0 7px 18px; border-bottom: 1px dashed var(--border); line-height: 1.55; position: relative; }
+.proof-list li:last-child { border-bottom: none; }
+.proof-list li::before { content: "▸"; color: var(--teal); font-weight: 700; position: absolute; left: 0; }
+.proof-list li strong { color: var(--slate); }
+.scope-note { margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--border); font-size: 11px; color: var(--light); font-style: italic; line-height: 1.55; }
+.app-card.dark-card { background: linear-gradient(135deg, var(--navy) 0%, #073B3B 100%); border-color: #1E3A3A; }
+.dark-card .app-head { background: rgba(255,255,255,0.04); border-color: rgba(255,255,255,0.1); }
+.dark-card .app-num { color: #475569; }
+.dark-card .app-head h2 { color: #F1F5F9; }
+.dark-card .app-tag { color: #64748B; }
+.dark-card .chip { background: rgba(0,144,144,0.3); color: #D5F5F5; }
+.dark-card .app-desc { color: #CBD5E1; }
+.dark-card .app-desc strong { color: #F1F5F9; }
+.dark-card .proof-list li { color: #CBD5E1; border-color: #1E3A3A; }
+.dark-card .proof-list li strong { color: #F1F5F9; }
+.dark-card .proof-list li::before { color: var(--teal-mid); }
+.dark-card .scope-note { color: #64748B; border-color: #1E3A3A; }
+/* NEW: compact "Also Building" strip */
+.also-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
+.also-card { background: var(--surface); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 16px 18px; }
+.also-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
+.also-head h3 { font-size: 15px; font-weight: 800; color: var(--slate); }
+.also-sub { font-size: 12px; color: var(--mid); line-height: 1.5; margin-bottom: 10px; }
+.also-stack { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 10px; }
+.also-stack .chip { font-size: 9.5px; padding: 3px 8px; }
+.also-expand { font-size: 11.5px; color: var(--teal); cursor: pointer; font-weight: 600; }
+.also-detail { font-size: 12px; color: var(--mid); line-height: 1.6; margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--border); }
+.also-detail ul { list-style: none; padding: 0; }
+.also-detail li { padding: 4px 0 4px 14px; position: relative; }
+.also-detail li::before { content: "▸"; color: var(--teal); position: absolute; left: 0; }
+.role-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.role-card { background: var(--surface); border: 1.5px solid var(--border); border-radius: var(--radius); padding: 20px; }
+.role-card h3 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--teal); margin-bottom: 12px; }
+.role-list { list-style: none; padding: 0; }
+.role-list li { font-size: 12.5px; color: var(--mid); padding: 6px 0 6px 16px; border-bottom: 1px dashed var(--border); line-height: 1.5; position: relative; }
+.role-list li:last-child { border-bottom: none; }
+.role-list li::before { content: "•"; color: var(--teal); position: absolute; left: 0; font-weight: 700; }
+.role-list li strong { color: var(--slate); }
+.context-block { background: var(--teal-lite); border: 1.5px solid #99DADA; border-left: 5px solid var(--teal); border-radius: var(--radius); padding: 18px 22px; margin-bottom: 20px; }
+.context-block h4 { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.2px; color: var(--teal); margin-bottom: 6px; }
+.context-block p { font-size: 13.5px; color: var(--mid); line-height: 1.65; }
+.context-block p strong { color: var(--slate); }
+.wins-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 20px; }
+.win-card { background: var(--surface); border: 1.5px solid var(--border); border-top: 3px solid var(--amber); border-radius: var(--radius); padding: 16px; }
+.win-num { font-size: 20px; font-weight: 800; color: var(--amber); }
+.win-label { font-size: 11.5px; color: var(--mid); margin-top: 4px; line-height: 1.45; }
+footer { background: var(--navy); border-top: 2px solid var(--teal); padding: 36px 32px; text-align: center; }
+footer .footer-name { font-size: 16px; font-weight: 800; color: #E2E8F0; margin-bottom: 6px; }
+footer .footer-sub { font-size: 12.5px; color: #64748B; margin-bottom: 18px; }
+footer .footer-links { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+footer a { font-size: 12.5px; color: var(--teal-mid); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+footer a:hover { color: #5EEAD4; }
+footer .copyright { margin-top: 20px; font-size: 10.5px; color: #334155; }
+@media (max-width: 680px) {
+  .stats-row { grid-template-columns: 1fr 1fr; }
+  .role-grid, .also-grid, .wins-row { grid-template-columns: 1fr; }
+  nav { padding: 0 16px; }
+  .nav-links a:not(.nav-cta):not(.nav-resume) { display: none; }
+  .hero { padding: 48px 16px 40px; }
+}
+/* NEW: sample-output figures + lightbox */
+.shot { margin: 4px 0 16px; border: 1.5px solid rgba(255,255,255,0.12); border-radius: 10px; overflow: hidden; background: #fff; }
+.app-card:not(.dark-card) .shot { border-color: var(--border); }
+.shot img { display: block; width: 100%; height: auto; cursor: zoom-in; transition: opacity 0.15s; }
+.shot img:hover { opacity: 0.92; }
+.shot figcaption { font-size: 11.5px; color: #94A3B8; padding: 9px 14px; line-height: 1.5; background: rgba(255,255,255,0.03); }
+.app-card:not(.dark-card) .shot figcaption { color: var(--mid); background: #FAFCFC; border-top: 1px solid var(--border); }
+.shot figcaption strong { color: var(--teal-mid); }
+.app-card:not(.dark-card) .shot figcaption strong { color: var(--teal); }
+/* side-by-side sample thumbnails */
+.shot-link { display: block; text-decoration: none; color: inherit; }
+.shot-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 8px 0 6px; }
+.shot-row-single { grid-template-columns: 1fr; }
+.shot-row-single .shot-thumb img { height: 300px; object-position: top center; }
+.shot-thumb { margin: 0; cursor: zoom-in; transition: transform 0.15s, box-shadow 0.15s; }
+.shot-thumb:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.28); }
+.shot-thumb img { height: 190px; width: 100%; object-fit: cover; object-position: top center; }
+.shot-hint { font-size: 11px; color: #94A3B8; margin-bottom: 14px; display: flex; align-items: center; gap: 6px; }
+.shot-hint i { color: var(--teal-mid); }
+@media (max-width: 680px) { .shot-row { grid-template-columns: 1fr; } .shot-thumb img { height: auto; } }
+.lightbox { display: none; position: fixed; inset: 0; z-index: 1000; background: rgba(8,12,20,0.92); align-items: center; justify-content: center; padding: 32px; cursor: zoom-out; text-decoration: none; }
+.lightbox:target { display: flex; }
+.lightbox img { max-width: 96vw; max-height: 92vh; border-radius: 8px; box-shadow: 0 12px 48px rgba(0,0,0,0.5); }
+.lightbox-close { position: absolute; top: 20px; right: 28px; font-size: 32px; color: #CBD5E1; cursor: pointer; line-height: 1; font-weight: 300; }
+.lightbox-close:hover { color: #fff; }
+
+/* Paceline carousel */
+.cr-modal { display: none; position: fixed; inset: 0; z-index: 1100; background: rgba(8,12,20,0.95); flex-direction: column; align-items: center; justify-content: center; padding: 48px 16px 72px; }
+.cr-modal.open { display: flex; }
+.cr-stage { position: relative; width: 100%; max-width: 1200px; max-height: 82vh; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+.cr-slide { display: none; margin: 0; width: 100%; text-align: center; }
+.cr-slide.active { display: block; animation: crFade 0.25s ease; }
+@keyframes crFade { from { opacity: 0; } to { opacity: 1; } }
+.cr-slide img { max-width: 100%; max-height: 72vh; width: auto; height: auto; border-radius: 10px; box-shadow: 0 12px 48px rgba(0,0,0,0.5); background: #0F172A; }
+.cr-slide figcaption { margin-top: 14px; font-size: 13px; color: #CBD5E1; }
+.cr-slide figcaption .cr-step { color: var(--teal-mid); font-weight: 700; margin-right: 8px; }
+.cr-slide figcaption strong { color: #fff; }
+.cr-close { position: absolute; top: 18px; right: 24px; font-size: 34px; line-height: 1; color: #CBD5E1; background: none; border: none; cursor: pointer; font-weight: 300; }
+.cr-close:hover { color: #fff; }
+.cr-nav { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; width: 48px; height: 48px; border-radius: 50%; font-size: 20px; cursor: pointer; transition: background 0.15s; }
+.cr-nav:hover { background: rgba(0,144,144,0.6); }
+.cr-prev { left: 20px; }
+.cr-next { right: 20px; }
+.cr-dots { position: absolute; bottom: 28px; left: 0; right: 0; display: flex; gap: 8px; justify-content: center; }
+.cr-dot { width: 9px; height: 9px; border-radius: 50%; border: none; background: rgba(255,255,255,0.3); cursor: pointer; padding: 0; transition: background 0.15s, transform 0.15s; }
+.cr-dot.active { background: var(--teal-mid); transform: scale(1.3); }
+@media (max-width: 680px) { .cr-nav { width: 40px; height: 40px; } .cr-slide img { max-height: 64vh; } }
 </style>
-
 </head>
-
 <body>
-
-
-
 <!-- NAV -->
-
 <nav>
-
-  <div class="nav-brand">Christopher McCourt &mdash; <span>AI &amp; Cloud Dev</span></div>
-
-  <div class="nav-links">
-
-    <a href="#builds">Builds</a>
-
-    <a href="#roles">Target Roles</a>
-
-    <a href="#about">About</a>
-
-    <a href="mailto:chris@cmccourt.net" class="nav-cta"><i class="fa-solid fa-envelope"></i> Contact</a>
-
-  </div>
-
+<div class="nav-brand">Christopher McCourt — <span>Senior Program Manager</span></div>
+<div class="nav-links">
+<a href="#roles">Target Roles</a>
+<a href="#builds">Builds</a>
+<a href="#about">About</a>
+<a class="nav-resume" href="/ChristopherMcCourt-Resume.pdf" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Résumé</a>
+<a class="nav-cta" href="mailto:chris@cmccourt.net"><i class="fa-solid fa-envelope"></i> Contact</a>
+</div>
 </nav>
 
-
-
 <!-- HERO -->
-
 <div class="hero">
-
-  <div class="hero-eyebrow">AI &amp; Cloud Development Portfolio · July 2026</div>
-
-  <h1>Program Manager.<br><em>I Build What I'd Otherwise Just Manage.</em></h1>
-
-  <p class="hero-sub">15+ years running enterprise technology programs. Five independent AI and cloud builds — not a pivot to engineering, but proof I use AI tools to sharpen my own judgment as a PM, not just track someone else's sprint.</p>
-
-  <div class="hero-badges">
-
-    <span class="hero-badge teal">Program Manager</span>
-
-    <span class="hero-badge amber">Hands-On Builder</span>
-
-    <span class="hero-badge">PMP · SAFe LPM · AWS CCP</span>
-
-    <span class="hero-badge">Nashville, TN · Remote</span>
-
-  </div>
-
-  <div class="hero-cta">
-
-    <a href="https://github.com/chrismc89" class="btn btn-primary" target="_blank">
-
-      <i class="fa-brands fa-github"></i> View GitHub
-
-    </a>
-
-    <a href="mailto:chris@cmccourt.net" class="btn btn-ghost">
-
-      <i class="fa-solid fa-paper-plane"></i> Get in Touch
-
-    </a>
-
-    <a href="https://linkedin.com/in/cmccourt" class="btn btn-ghost" target="_blank">
-
-      <i class="fa-brands fa-linkedin"></i> LinkedIn
-
-    </a>
-
-  </div>
-
+<div class="hero-eyebrow">AI &amp; Cloud Development Portfolio · 2026</div>
+<h1>Senior Program Manager.<br/><em>I build the things I'd otherwise just manage.</em></h1>
+<p class="hero-sub">15+ years delivering complex technology portfolios in healthcare and regulated industries — with a working GitHub history to prove I understand what my engineers actually ship. Not a career change to engineering: a PM closing the gap between managing the build and understanding it.</p>
+<div class="hero-badges">
+<span class="hero-badge teal">Program Manager</span>
+<span class="hero-badge amber">Hands-On Builder</span>
+<span class="hero-badge">PMP · SAFe LPM · AWS CCP</span>
+<span class="hero-badge">Nashville, TN · Remote</span>
+</div>
+<div class="hero-cta">
+<a class="btn btn-resume" href="/ChristopherMcCourt-Resume.pdf" target="_blank">
+<i class="fa-solid fa-file-arrow-down"></i> Download Résumé (PDF)
+</a>
+<a class="btn btn-primary" href="https://github.com/chrismc89" target="_blank">
+<i class="fa-brands fa-github"></i> View GitHub
+</a>
+<a class="btn btn-ghost" href="mailto:chris@cmccourt.net">
+<i class="fa-solid fa-paper-plane"></i> Get in Touch
+</a>
+<a class="btn btn-ghost" href="https://linkedin.com/in/cmccourt" target="_blank">
+<i class="fa-brands fa-linkedin"></i> LinkedIn
+</a>
+</div>
 </div>
 
-
-
 <!-- MAIN -->
-
 <div class="container">
 
-
-
-  <!-- STATS -->
-
-  <div class="section">
-
-    <div class="stats-row">
-
-      <div class="stat-card">
-
-        <div class="stat-num">5</div>
-
-        <div class="stat-label">Independently-built apps</div>
-
-      </div>
-
-      <div class="stat-card">
-
-        <div class="stat-num">3</div>
-
-        <div class="stat-label">In production &amp; deployed</div>
-
-      </div>
-
-      <div class="stat-card">
-
-        <div class="stat-num">2</div>
-
-        <div class="stat-label">Cloud providers (AWS + Azure)</div>
-
-      </div>
-
-      <div class="stat-card">
-
-        <div class="stat-num">1</div>
-
-        <div class="stat-label">Live agentic AI service</div>
-
-      </div>
-
-    </div>
-
-
-
-    <!-- CONTEXT BOX -->
-
-    <div class="context-block">
-
-      <h4>🛠️ Why This Portfolio Exists</h4>
-
-      <p>Most 15-year program management track records don't come with a GitHub history. Mine does because I set out to expand what I understood, not just what I managed — using AI tools to go from reading a spec to shipping and debugging the thing the spec described.</p>
-
-      <p style="margin-top:10px;">This isn't a career change to engineering. It's a program manager closing the gap between "I manage engineers" and "I understand what they actually built" — a distinction that matters for AI Program Management, AI Delivery, and technical-adjacent PM roles at scale. Every claim below is verified against source code, infrastructure configs, or live deployment logs, not marketing language.</p>
-
-    </div>
-
-
-
-    <!-- APPS -->
-
-    <div id="builds">
-
-      <div class="section-label">Applications</div>
-
-      <div class="section-title">The Builds</div>
-
-      <div class="section-sub">Five apps plus a shared agentic service — each with a real use case, real infrastructure, and a real deployment story.</div>
-
-
-
-      <div class="apps-grid">
-
-
-
-
-
-        <!-- PM AGENT -->
-
-        <div class="app-card dark-card" style="border-color: #2D1F5E;">
-
-          <div class="app-head" style="background: rgba(124,79,209,0.12); border-color: rgba(124,79,209,0.3);">
-
-            <div>
-
-              <div class="app-num" style="color:#7C4FD1;">Application 00 &mdash; Featured Build</div>
-
-              <h2 style="color:#F1F5F9;">PM Agent</h2>
-
-              <div class="app-tag" style="color:#94A3B8;">Agentic AI project management system &mdash; MCP · FastAPI · 3 AI surfaces</div>
-
-            </div>
-
-            <div class="status-pill svc" style="background:#EDE9FE; color:#6D28D9;">Production &middot; Deployed</div>
-
-          </div>
-
-          <div class="app-body">
-
-            <div class="stack-row">
-
-              <span class="chip chip-purple">FastAPI (Python)</span>
-
-              <span class="chip chip-purple">MCP Server (30 tools)</span>
-
-              <span class="chip chip-purple">AWS App Runner</span>
-
-              <span class="chip chip-purple">Docker &rarr; ECR</span>
-
-              <span class="chip chip-purple">PostgreSQL + pgvector</span>
-
-              <span class="chip chip-purple">Terraform IaC</span>
-
-              <span class="chip chip-purple">Anthropic Claude</span>
-
-              <span class="chip chip-purple">Amazon Bedrock</span>
-
-            </div>
-
-            <p class="app-desc" style="color:#CBD5E1;">An agentic AI assistant for program and delivery managers built around a real PM mental model: ingest delivery data &rarr; score it deterministically &rarr; layer LLM judgment on top &rarr; expose 30 tools via MCP to whichever AI surface the user already works in. <strong style="color:#F1F5F9;">Works natively inside Claude Desktop, ChatGPT (custom GPT), and Microsoft 365 Copilot.</strong></p>
-
-            <ul class="proof-list">
-
-              <li><strong style="color:#F1F5F9;">30 MCP tools</strong> across 4 role-based personas &mdash; Program Manager, Product Manager, Product Owner, Shared &mdash; each with a distinct tool visibility set.</li>
-
-              <li><strong style="color:#F1F5F9;">10-layer pipeline</strong>: Jira ingest &rarr; normalization &rarr; PostgreSQL &rarr; deterministic risk engine (Tier 1, always on) &rarr; LLM judgment (Tier 2, on demand) &rarr; analysis modules &rarr; synthesis &rarr; Core Agent API &rarr; MCP/OpenAPI/Copilot adapters &rarr; AI surface.</li>
-
-              <li><strong style="color:#F1F5F9;">Audited LLM adapter</strong> &mdash; every Tier-2 call passes a 4-step chain in code: kill switch &rarr; governance approval &rarr; PII sanitization &rarr; audit log. Graceful degradation to Tier-1 rules on any failure.</li>
-
-              <li><strong style="color:#F1F5F9;">NIST AI RMF 1.0 + PMI-CPMAI governance alignment</strong> &mdash; explainability, human oversight, data minimization, and lifecycle controls designed in at the architecture level.</li>
-
-              <li><strong style="color:#F1F5F9;">Three AI surfaces</strong>: Claude (MCP &mdash; stdio + Streamable HTTP), ChatGPT (custom GPT via OpenAPI action), Microsoft 365 Copilot (declarative agent via Teams).</li>
-
-              <li><strong style="color:#F1F5F9;">Terraform IaC</strong> &mdash; ECR repo, App Runner service, EventBridge nightly batch rescore, all declaratively managed.</li>
-
-            </ul>
-
-            <div class="scope-note" style="border-color:#2D1F5E; color:#64748B;">
-
-              Source: <a href="https://github.com/chrismc89/PM-Agent" target="_blank" style="color:#A78BFA;">github.com/chrismc89/PM-Agent</a> &middot; Production &middot; Deployed on AWS App Runner &middot; Last verified July 2026
-
-            </div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- APP 01 -->
-
-        <div class="app-card">
-
-          <div class="app-head">
-
-            <div>
-
-              <div class="app-num">Application 01</div>
-
-              <h2>CareerIQ</h2>
-
-              <div class="app-tag">Personalized AI career-intelligence web app</div>
-
-            </div>
-
-            <div class="status-pill prod">Production · Deployed</div>
-
-          </div>
-
-          <div class="app-body">
-
-            <div class="stack-row">
-
-              <span class="chip">AWS Lambda</span>
-
-              <span class="chip">S3</span>
-
-              <span class="chip">CloudFront</span>
-
-              <span class="chip">Cognito (OAuth2/PKCE)</span>
-
-              <span class="chip">SSM Parameter Store</span>
-
-              <span class="chip">KMS</span>
-
-              <span class="chip">Anthropic API</span>
-
-            </div>
-
-            <p class="app-desc">Five prompt-configured AI modules — <strong>JD fit/gap scoring &amp; resume tailoring, company research, application-strategy planning, interview prep, and profile management</strong> — served from a single-page app on AWS serverless infrastructure with a live Claude API integration.</p>
-
-            <ul class="proof-list">
-
-              <li><strong>OAuth2/PKCE authentication</strong> via Cognito; invite-only access enforced end to end.</li>
-
-              <li><strong>KMS-encrypted secrets management</strong> — API key stored as an SSM SecureString, never hardcoded or client-side.</li>
-
-              <li><strong>Live LLM integration</strong> — Lambda proxy calls Anthropic API directly; model-string cutover handled after mid-cycle model retirement.</li>
-
-              <li>Solo-diagnosed a full <strong>CORS/auth debugging arc</strong> across 9 build sessions — root causes included stale IAM policy, duplicate CORS headers, API Gateway stage-prefix mismatches, resolved by moving to a Lambda Function URL.</li>
-
-            </ul>
-
-            <div class="scope-note">Scope note: 5 prompt-configured modules — not a multi-agent system. No inter-module handoff or autonomous planning.</div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- APP 02 -->
-
-        <div class="app-card">
-
-          <div class="app-head">
-
-            <div>
-
-              <div class="app-num">Application 02</div>
-
-              <h2>Delivery Insights</h2>
-
-              <div class="app-tag">Multi-methodology delivery-analytics platform</div>
-
-            </div>
-
-            <div class="status-pill prod">Production · Deployed</div>
-
-          </div>
-
-          <div class="app-body">
-
-            <div class="stack-row">
-
-              <span class="chip">Azure Static Web Apps</span>
-
-              <span class="chip">Entra External ID (MSAL.js/PKCE)</span>
-
-              <span class="chip">Key Vault</span>
-
-              <span class="chip">Table Storage</span>
-
-              <span class="chip">GitHub Actions CI/CD</span>
-
-            </div>
-
-            <p class="app-desc">Turns Jira exports into <strong>earned-value metrics (SPI/CPI/EAC), flow metrics, and ranked delivery-risk signals</strong> across Scrum, Kanban, SAFe, and PMI methodologies — a single tool that speaks four delivery frameworks' native vocabulary.</p>
-
-            <ul class="proof-list">
-
-              <li><strong>Zero-data-egress design</strong> — client Jira data is processed and never persisted outside the customer's own tenant boundary.</li>
-
-              <li><strong>Full CI/CD via GitHub Actions</strong> to Azure Static Web Apps, with Entra External ID + MSAL.js PKCE auth flow.</li>
-
-              <li><strong>Vanilla JS front end with no build step</strong> — deliberately zero-dependency for long-term maintainability.</li>
-
-            </ul>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- APP 03 -->
-
-        <div class="app-card">
-
-          <div class="app-head">
-
-            <div>
-
-              <div class="app-num">Application 03</div>
-
-              <h2>Northline <span style="font-size:13px;color:var(--light);font-weight:400;">(dev codename: Waypoint)</span></h2>
-
-              <div class="app-tag">Program/PI health dashboard with deterministic risk engine</div>
-
-            </div>
-
-            <div class="status-pill dev">Active Development</div>
-
-          </div>
-
-          <div class="app-body">
-
-            <div class="stack-row">
-
-              <span class="chip">FastAPI + PostgreSQL</span>
-
-              <span class="chip">Next.js 16 / React 19 / TypeScript</span>
-
-              <span class="chip">Azure Container Apps</span>
-
-              <span class="chip">Entra ID (EasyAuth)</span>
-
-              <span class="chip">Bicep IaC</span>
-
-              <span class="chip">pytest + Hypothesis</span>
-
-            </div>
-
-            <p class="app-desc">Ingests Jira data (API pull or CSV/XLSX upload) and runs it through a <strong>9-rule deterministic risk engine</strong> producing typed, severity-scored findings — plus Monte Carlo forecasting, a Gantt roadmap view, and a stakeholder-analysis module.</p>
-
-            <ul class="proof-list">
-
-              <li><strong>Parallel LLM orchestration</strong> — 8 independent analysis sections execute concurrently via <code>asyncio.TaskGroup</code>, multiplexed onto one SSE stream with per-section timeout/error isolation.</li>
-
-              <li><strong>Human-in-the-loop regeneration</strong> — any of the 8 sections can be re-run independently after review, without re-running the rest.</li>
-
-              <li><strong>Multi-provider LLM abstraction</strong> — Azure OpenAI, OpenAI, and Claude behind one common adapter interface, swappable via env var.</li>
-
-              <li><strong>Property-based backend testing</strong> (pytest + Hypothesis) — a materially more rigorous QA posture than most portfolio-stage projects.</li>
-
-            </ul>
-
-            <div class="scope-note">Scope note: parallel LLM orchestration, not multi-agent AI — no section reads another's output; no autonomous planning or LLM-driven tool use in the orchestrator.</div>
-
-          </div>
-
-        </div>
-
-
-
-        <!-- APP 04 -->
-
-        <div class="app-card">
-
-          <div class="app-head">
-
-            <div>
-
-              <div class="app-num">Application 04</div>
-
-              <h2>Paceline</h2>
-
-              <div class="app-tag">Engagement-health signals engine, for agencies &amp; consultancies</div>
-
-            </div>
-
-            <div class="status-pill proto">Working Prototype</div>
-
-          </div>
-
-          <div class="app-body">
-
-            <div class="stack-row">
-
-              <span class="chip">CloudFront + S3 (SPA)</span>
-
-              <span class="chip">Cognito PKCE</span>
-
-              <span class="chip">API Gateway + Lambda</span>
-
-              <span class="chip">S3 JSON persistence</span>
-
-            </div>
-
-            <p class="app-desc">Computes <strong>EVM-style engagement metrics (CPI/SPI/EAC/PAC)</strong> and fires deterministic signals — revenue at risk, margin erosion, schedule slip, team over-burn, retainer over-service — for firms running multiple client engagements concurrently.</p>
-
-            <ul class="proof-list">
-
-              <li>Fully <strong>AWS-native static SPA</strong> with same-origin <code>/api/*</code> surface backed by API Gateway + Lambda, single JSON-document-per-firm persistence in S3.</li>
-
-              <li>In active development: an evidence panel that traces every fired signal to its driving metric, phase, and team member.</li>
-
-              <li>A grounded <strong>"Ask Pacer" assistant</strong> scoped to answer only from computed evidence — not general-purpose chat.</li>
-
-            </ul>
-
-            <div class="scope-note">Scope note: working prototype in active development — distinguished deliberately from CareerIQ and Delivery Insights (both production).</div>
-
-          </div>
-
-        </div>
-
-
-
-        
-        <!-- APP 05 -->
-        <div class="app-card">
-          <div class="app-head">
-            <div>
-              <div class="app-num">Application 05</div>
-              <h2>Keel Watch</h2>
-              <div class="app-tag">Contract renewal risk agent for SMB agencies &mdash; MCP &middot; AWS Bedrock &middot; Evidence-grounded output</div>
-            </div>
-            <div class="status-pill proto">Pilot-Ready &middot; Design Partner Pending</div>
-          </div>
-          <div class="app-body">
-            <div class="stack-row">
-              <span class="chip">Node.js (CommonJS)</span>
-              <span class="chip">AWS Bedrock (Claude)</span>
-              <span class="chip">MCP Server (stdio + HTTP)</span>
-              <span class="chip">pdf-parse</span>
-              <span class="chip">OpenAI-compatible</span>
-              <span class="chip">Azure Container Apps</span>
-              <span class="chip">@modelcontextprotocol/sdk</span>
-            </div>
-            <p class="app-desc">Reads a signed contract (PDF) and a client email thread, determines whether a renewal window is closing on a relationship that&rsquo;s gone quiet, and delivers <strong>two cited work-products</strong> &mdash; a one-page renewal-risk brief and a draft outreach email. <strong>Every factual claim traces back to a specific clause or dated email</strong> via a structured evidence ledger. Nothing sends without human sign-off; low-confidence reads are surfaced, never smoothed over.</p>
-            <ul class="proof-list">
-              <li><strong>Evidence ledger architecture</strong> &mdash; every claim in the output cites a <code>sourceRef</code> (contract clause + page, or email date + excerpt); ungrounded assertions are structurally impossible, not just prompted against.</li>
-              <li><strong>MCP tool wrapper</strong> &mdash; the entire pipeline is exposed as a callable <code>check_contract_renewal_risk</code> tool so any MCP-compatible AI agent can invoke it mid-conversation, without a human at the CLI.</li>
-              <li><strong>Deliberate standalone architecture</strong> &mdash; intentionally decoupled from the enterprise Paceline SignalCore engine (gated on an IP opinion letter); pilot logic is single-purpose, disposable, and independently validated with 33 passing tests.</li>
-              <li><strong>Provider-agnostic LLM layer</strong> &mdash; same pipeline runs against AWS Bedrock (default) or OpenAI/Azure OpenAI via a swappable <code>llmClient</code> dependency, selected per-call or via env var.</li>
-              <li><strong>Full feasibility &amp; brand system built</strong> &mdash; SMB go-to-market study, pricing model, compliance posture (no auto-send, data isolation, legal-disclaimer requirements), and a KeelAI product family brand identity completed before commercial engagement.</li>
-            </ul>
-            <div class="scope-note">Scope note: pilot-ready pipeline &mdash; 33/43 tasks complete, all technical build done. Remaining steps are process (design partner engagement, delivery, debrief). Positioned as the first standalone product in the KeelAI family, not an enterprise-CLM feature.</div>
-          </div>
-        </div>
-
-        <!-- SHARED SERVICE -->
-
-        <div class="app-card dark-card">
-
-          <div class="app-head">
-
-            <div>
-
-              <div class="app-num">Shared Service</div>
-
-              <h2>Investigator Agent — Grounded Recommendation Layer</h2>
-
-              <div class="app-tag">Deployed service backing Paceline and Northline as host apps</div>
-
-            </div>
-
-            <div class="status-pill svc">Deployed Service</div>
-
-          </div>
-
-          <div class="app-body">
-
-            <div class="stack-row">
-
-              <span class="chip">Fastify (Node)</span>
-
-              <span class="chip">AWS App Runner</span>
-
-              <span class="chip">Docker → ECR</span>
-
-              <span class="chip">DynamoDB</span>
-
-              <span class="chip chip-purple">Bedrock / Anthropic / OpenAI / Azure OpenAI</span>
-
-            </div>
-
-            <p class="app-desc">A real tool-calling agent — <strong>not a prompt wrapper</strong>. A bounded reasoning loop (reason → call tool → observe, capped at 3 calls and 20 seconds) decides what evidence to look up before it's allowed to make a recommendation, backed by a circuit breaker and a persisted audit trail.</p>
-
-            <ul class="proof-list">
-
-              <li><strong>Grounding enforced in code</strong> — recommendations that don't cite retrieved tool evidence are rejected and tagged <code>ungrounded-fallback</code>, not just prompted for.</li>
-
-              <li><strong>Two-layer feature-gate governance</strong> between each host app and the agent — independent flags must both be true, so either app degrades gracefully if the agent is disabled.</li>
-
-              <li><strong>Live cross-cloud migration</strong> — moving production traffic from Azure Container Apps to AWS App Runner via Docker → ECR → <code>aws apprunner start-deployment</code> pipeline.</li>
-
-              <li><strong>Cross-language integration</strong> — same 3-tool contract proven against Paceline's JS/Node stack and Northline's Python/FastAPI stack.</li>
-
-              <li><strong>Hands-on IAM/authorization debugging</strong> — diagnosed a live 403-on-write issue traced to an execution-role permission gap.</li>
-
-            </ul>
-
-          </div>
-
-        </div>
-
-
-
-      </div><!-- /apps-grid -->
-
-    </div>
-
-
-
-    <!-- ROLE MAPPING -->
-
-    <div id="roles" class="section" style="padding-top:0;">
-
-      <div class="section-label">Target Roles</div>
-
-      <div class="section-title">How This Maps to the Market</div>
-
-      <div class="section-sub">These builds speak directly to requirements in AI Program Management, Delivery, and technical-adjacent PM roles.</div>
-
-      <div class="role-grid">
-
-        <div class="role-card">
-
-          <h3>🏛️ Amazon — Program Manager / AI Program Manager</h3>
-
-          <ul class="role-list">
-
-            <li><strong>Financial governance on programs with real money at stake</strong> (supporting governance of an $8M Clarity portfolio in healthcare; delivery support across a $28M Identity &amp; Fraud portfolio) → Ownership: accountable for delivery where the risk was real money, not a sandbox.</li>
-
-            <li><strong>Independent AI/cloud builds across 2 clouds</strong> → Dive Deep and Learn and Be Curious made concrete: I can read an IAM error, understand a CORS failure, or follow an engineer's trade-off conversation instead of taking it on faith.</li>
-
-            <li><strong>Governance-by-design thinking applied to my own builds</strong> (zero-data-egress architecture, audited LLM adapters, NIST AI RMF alignment) → a PM who designs guardrails before being told to, not after an incident.</li>
-
-          </ul>
-
-        </div>
-
-        <div class="role-card">
-
-          <h3>🔵 Oracle — Senior Program Manager / Delivery Manager</h3>
-
-          <ul class="role-list">
-
-            <li><strong>Multi-methodology delivery credibility</strong> (Scrum, Kanban, SAFe, PMI) proven twice — once running real programs, once building a tool that scores against all four frameworks.</li>
-
-            <li><strong>Vendor and platform governance experience</strong> (SI management, Clarity financial governance support) + provider-agnostic instincts in my own builds (swappable LLM backends across Bedrock/OpenAI/Azure OpenAI) → the same anti-lock-in thinking applied at the program level and the architecture level.</li>
-
-          </ul>
-
-        </div>
-
-        <div class="role-card">
-
-          <h3>🤖 AI Program / Delivery Manager</h3>
-
-          <ul class="role-list">
-
-            <li><strong>This is the role these builds speak to most directly:</strong> I didn't read about agentic AI governance, I designed and shipped it — kill switches, audit logs, human-in-the-loop regeneration, evidence-grounded outputs.</li>
-
-            <li><strong>A practical, hands-on understanding</strong> of where AI should and shouldn't make the call — built from implementation, not a vendor briefing.</li>
-
-            <li><strong>SMB product: feasibility, brand, compliance posture</strong> (Keel Watch) → an AI PM who can scope a product, not just ship a feature.</li>
-
-          </ul>
-
-        </div>
-
-        <div class="role-card">
-
-          <h3>🏢 Consulting / Platform PM Roles</h3>
-
-          <ul class="role-list">
-
-            <li><strong>Every build here started as a tool I actually needed</strong>, not a portfolio exercise — the same instinct that grew a client engagement from $105K to $265K by delivering, not pitching.</li>
-
-            <li><strong>Comfortable translating between engineering and the business</strong>, because I've sat on both sides of that conversation.</li>
-
-          </ul>
-
-        </div>
-
-      </div>
-
-    </div>
-
-
-
-    <!-- ABOUT -->
-
-    <div id="about" class="section" style="padding-top:0; padding-bottom: 0;">
-
-      <div class="section-label">About</div>
-
-      <div class="section-title">The Full Picture</div>
-
-      <div class="section-sub">The builds are one part of a 15-year delivery track record.</div>
-
-      <div class="context-block">
-
-        <h4>🎯 Positioning</h4>
-
-        <p>A program manager who uses AI tools to expand his own judgment — not a career change to engineering. The builds above are the evidence; the 15-year delivery track record below is the context.</p>
-
-      </div>
-
-      <div class="context-block" style="border-left-color: var(--amber); border-color: #F5C99A; background: var(--amber-lite);">
-
-        <h4 style="color:var(--amber);">📋 Core Credentials</h4>
-
-        <p><strong>MBA · PMP · SAFe LPM · AWS Certified Cloud Practitioner · CSPO · CSM</strong><br>
-
-        15+ years in enterprise technology consulting delivery | Legacy-platform convergence with $30M in audit-penalty exposure | Cross-functional team leadership (14 teams) | Account growth through delivery ($105K → $265K, closed 22% under budget)</p>
-
-      </div>
-
-      <div style="text-align:center; margin-top:36px; margin-bottom:8px;">
-
-        <p style="font-size:11px;color:var(--light);line-height:1.7;">All technical claims verified against source code, infrastructure configs, or live deployment logs as of July 2026.<br>Status labels (Production / Active Development / Working Prototype) are accurate as of this date.</p>
-
-      </div>
-
-    </div>
-
-
-
-  </div><!-- /section -->
+<!-- STATS + WHY -->
+<div class="section" style="padding-bottom:0;">
+<div class="stats-row">
+<div class="stat-card"><div class="stat-num">6</div><div class="stat-label">Independently-built apps &amp; services</div></div>
+<div class="stat-card"><div class="stat-num">3</div><div class="stat-label">In production &amp; deployed</div></div>
+<div class="stat-card"><div class="stat-num">2</div><div class="stat-label">Cloud providers (AWS + Azure)</div></div>
+<div class="stat-card"><div class="stat-num">15+</div><div class="stat-label">Years enterprise delivery</div></div>
+</div>
+<div class="context-block">
+<h4>🛠️ Why This Portfolio Exists</h4>
+<p>Most 15-year program-management track records don't come with a GitHub history. Mine does — because I set out to expand what I <em>understand</em>, not just what I manage. Every claim below is verified against source code, infrastructure configs, or live deployment logs. No marketing language.</p>
+</div>
+</div>
+
+<!-- ROLE MAPPING — MOVED UP: lead with how this maps to the recruiter's req -->
+<div class="section" id="roles" style="padding-bottom:40px;">
+<div class="section-label">Target Roles</div>
+<div class="section-title">How This Maps to the Market</div>
+<div class="section-sub">Here's how these builds map to the roles I'm targeting — skip to the one that matches your req. Full technical evidence is in The Builds below.</div>
+<div class="role-grid">
+<div class="role-card">
+<h3>🏛️ Program Manager / AI Program Manager</h3>
+<ul class="role-list">
+<li><strong>Financial governance where the money is real</strong> (supporting an $8M Clarity portfolio in healthcare; delivery support across a $28M Identity &amp; Fraud portfolio) → accountable for delivery where the risk was real money, not a sandbox.</li>
+<li><strong>Independent AI/cloud builds across 2 clouds</strong> → Dive Deep, Learn and Be Curious made concrete: I can read an IAM error, understand a CORS failure, or follow an engineer's trade-off conversation instead of taking it on faith.</li>
+<li><strong>Governance-by-design in my own builds</strong> (zero-data-egress architecture, audited LLM adapters, NIST AI RMF alignment) → a PM who designs guardrails before being told to, not after an incident.</li>
+</ul>
+</div>
+<div class="role-card">
+<h3>🔵 Senior Program Manager</h3>
+<ul class="role-list">
+<li><strong>Multi-methodology delivery credibility</strong> (Scrum, Kanban, SAFe, PMI) proven twice — once running real programs, once building a tool that scores against all four frameworks.</li>
+<li><strong>Vendor and platform governance</strong> (SI management, Clarity financial governance support) + provider-agnostic instincts in my builds (swappable LLM backends across Bedrock/OpenAI/Azure OpenAI) → the same anti-lock-in thinking at the program level and the architecture level.</li>
+</ul>
+</div>
+<div class="role-card">
+<h3>🤖 AI Program / Delivery Manager</h3>
+<ul class="role-list">
+<li><strong>The role these builds speak to most directly:</strong> I didn't read about agentic AI governance — I designed and shipped it: kill switches, audit logs, human-in-the-loop regeneration, evidence-grounded outputs.</li>
+<li><strong>A practical, hands-on sense</strong> of where AI should and shouldn't make the call — built from implementation, not a vendor briefing.</li>
+<li><strong>SMB product work: feasibility, brand, compliance</strong> (Keel Watch) → an AI PM who can scope a product, not just ship a feature.</li>
+</ul>
+</div>
+<div class="role-card">
+<h3>🏢 Consulting / Platform PM Roles</h3>
+<ul class="role-list">
+<li><strong>Every build started as a tool I actually needed</strong>, not a portfolio exercise — the same instinct that grew a client engagement from $105K to $265K by delivering, not pitching.</li>
+<li><strong>Comfortable translating between engineering and the business</strong>, because I've sat on both sides of that conversation.</li>
+</ul>
+</div>
+<div class="role-card" style="grid-column: 1 / -1;">
+<h3>🚢 Senior Delivery Manager</h3>
+<ul class="role-list">
+<li><strong>Delivery leadership is my current seat, not an aspiration</strong> — leading end-to-end delivery of a multi-customer healthcare platform convergence (65+ features, 1,955+ story points, $30M audit-penalty exposure) through 5 major scope changes and a mid-program pivot.</li>
+<li><strong>Owns the full delivery system</strong> — scope, schedule, dependency sequencing across 14 cross-functional US/offshore teams, release readiness (DoR/DoD, PI cadences), and $8M portfolio financial governance in Clarity.</li>
+<li><strong>A delivery manager who understands the build</strong> — the same instinct productized in Delivery Insights, which turns Jira exports into earned-value and flow metrics across Scrum, Kanban, SAFe, and PMI. I don't just track the delivery; I understand what's being delivered.</li>
+<li><strong>Track record of protecting margin while scaling delivery</strong> — grew a client engagement $105K → $265K and closed it 22% under budget by matching staffing to demand with no idle bench.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<!-- APPS — 3 FLAGSHIP (two-layer cards) -->
+<div id="builds">
+<div class="section-label">Applications</div>
+<div class="section-title">The Builds — Flagship</div>
+<div class="section-sub">Three production apps and a product-grade prototype. Each has a plain-English summary first; expand "Technical detail" for the architecture evidence.</div>
+<div class="apps-grid">
+
+<!-- PM AGENT -->
+<div class="app-card dark-card" style="border-color:#2D1F5E;">
+<div class="app-head" style="background:rgba(124,79,209,0.12); border-color:rgba(124,79,209,0.3);">
+<div>
+<div class="app-num" style="color:#7C4FD1;">Application 00 — Featured Build</div>
+<h2 style="color:#F1F5F9;">PM Agent</h2>
+<div class="app-tag" style="color:#94A3B8;">Agentic AI project-management system — MCP · FastAPI · 3 AI surfaces</div>
+</div>
+<div class="status-pill svc" style="background:#EDE9FE; color:#6D28D9;">Production · Deployed</div>
+</div>
+<div class="app-body">
+<div class="plain-lede">An agentic AI assistant for delivery managers. It ingests Jira delivery data, scores risk deterministically, then layers AI judgment on top — and runs <strong>inside the tools PMs already use: Claude, ChatGPT, and Microsoft 365 Copilot</strong>. Production, deployed on AWS.</div>
+<!-- Sample outputs: side-by-side thumbnails, click to enlarge -->
+<div class="shot-row">
+<a class="shot-link" href="#lb-brief"><figure class="shot shot-thumb">
+<img src="/pm-agent-morning-brief.png" alt="PM Agent Morning Brief — portfolio pulse, blocker spotlight, stale items and suggested next moves" loading="lazy"/>
+<figcaption>Sample output — a live <strong>morning_brief</strong>: portfolio pulse, the blocker driving the red, and sourced next moves.</figcaption>
+</figure></a>
+<a class="shot-link" href="#lb-tools"><figure class="shot shot-thumb">
+<img src="/pm-agent-tools-infographic.png" alt="PM Agent tool catalog — 20 tools across 6 groups, each tagged for Product or Delivery audiences" loading="lazy"/>
+<figcaption>The tool catalog — <strong>20 tools</strong> across 6 groups, each tagged P (Product) or D (Delivery).</figcaption>
+</figure></a>
+</div>
+<div class="shot-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Click either to enlarge</div>
+<details>
+<summary class="reveal-tech"><span class="chev">▸</span> Technical detail</summary>
+<div class="stack-row">
+<span class="chip chip-purple">FastAPI (Python)</span>
+<span class="chip chip-purple">MCP Server (20 tools)</span>
+<span class="chip chip-purple">AWS App Runner</span>
+<span class="chip chip-purple">Docker → ECR</span>
+<span class="chip chip-purple">PostgreSQL + pgvector</span>
+<span class="chip chip-purple">Terraform IaC</span>
+<span class="chip chip-purple">Anthropic Claude</span>
+<span class="chip chip-purple">Amazon Bedrock</span>
+</div>
+<ul class="proof-list">
+<li><strong style="color:#F1F5F9;">20 MCP tools</strong> across 6 functional groups, role-filtered for two audiences — Product (roadmap, scope, release) and Delivery (risk, flow, people, ops) — each user sees only the tools that fit their job via <code>get_my_tools</code>.</li>
+<li><strong style="color:#F1F5F9;">10-layer pipeline</strong>: Jira ingest → normalization → PostgreSQL → deterministic risk engine (Tier 1, always on) → LLM judgment (Tier 2, on demand) → analysis → synthesis → Core Agent API → MCP/OpenAPI/Copilot adapters → AI surface.</li>
+<li><strong style="color:#F1F5F9;">Audited LLM adapter</strong> — every Tier-2 call passes a 4-step chain in code: kill switch → governance approval → PII sanitization → audit log. Graceful degradation to Tier-1 rules on any failure.</li>
+<li><strong style="color:#F1F5F9;">NIST AI RMF 1.0 + PMI-CPMAI governance alignment</strong> — explainability, human oversight, data minimization, and lifecycle controls designed in at the architecture level.</li>
+<li><strong style="color:#F1F5F9;">Three AI surfaces</strong>: Claude (MCP — stdio + Streamable HTTP), ChatGPT (custom GPT via OpenAPI action), Microsoft 365 Copilot (declarative agent via Teams).</li>
+<li><strong style="color:#F1F5F9;">Terraform IaC</strong> — ECR repo, App Runner service, EventBridge nightly batch rescore, all declaratively managed.</li>
+</ul>
+</details>
+<div class="scope-note" style="border-color:#2D1F5E; color:#64748B;">Source: <a href="https://github.com/chrismc89/PM-Agent" style="color:#A78BFA;" target="_blank">github.com/chrismc89/PM-Agent</a> · Production · Deployed on AWS App Runner · Last verified July 2026</div>
+</div>
+</div>
+
+<!-- CAREERIQ -->
+<div class="app-card">
+<div class="app-head">
+<div>
+<div class="app-num">Application 01</div>
+<h2>CareerIQ</h2>
+<div class="app-tag">Personalized AI career-intelligence web app</div>
+</div>
+<div class="status-pill prod">Production · Deployed</div>
+</div>
+<div class="app-body">
+<div class="plain-lede">A private AI career-intelligence app: résumé fit/gap scoring and tailoring, company research, application strategy, and interview prep. Built on <strong>AWS serverless with a live Claude integration and invite-only sign-in</strong>. Production.</div>
+<details>
+<summary class="reveal-tech"><span class="chev">▸</span> Technical detail</summary>
+<div class="stack-row">
+<span class="chip">AWS Lambda</span>
+<span class="chip">S3</span>
+<span class="chip">CloudFront</span>
+<span class="chip">Cognito (OAuth2/PKCE)</span>
+<span class="chip">SSM Parameter Store</span>
+<span class="chip">KMS</span>
+<span class="chip">Anthropic API</span>
+</div>
+<ul class="proof-list">
+<li><strong>OAuth2/PKCE authentication</strong> via Cognito; invite-only access enforced end to end.</li>
+<li><strong>KMS-encrypted secrets management</strong> — API key stored as an SSM SecureString, never hardcoded or client-side.</li>
+<li><strong>Live LLM integration</strong> — Lambda proxy calls the Anthropic API directly; model-string cutover handled after a mid-cycle model retirement.</li>
+<li>Solo-diagnosed a full <strong>CORS/auth debugging arc</strong> across 9 build sessions — stale IAM policy, duplicate CORS headers, API Gateway stage-prefix mismatches — resolved by moving to a Lambda Function URL.</li>
+</ul>
+<div class="scope-note">Scope note: 5 prompt-configured modules — not a multi-agent system. No inter-module handoff or autonomous planning.</div>
+</details>
+</div>
+</div>
+
+<!-- DELIVERY INSIGHTS -->
+<div class="app-card">
+<div class="app-head">
+<div>
+<div class="app-num">Application 02</div>
+<h2>Delivery Insights</h2>
+<div class="app-tag">Multi-methodology delivery-analytics platform</div>
+</div>
+<div class="status-pill prod">Production · Deployed</div>
+</div>
+<div class="app-body">
+<div class="plain-lede">Turns Jira exports into <strong>earned-value and flow metrics across Scrum, Kanban, SAFe, and PMI</strong> — one tool that speaks four delivery frameworks' native vocabulary. Built on Azure with a zero-data-egress design. Production.</div>
+<details>
+<summary class="reveal-tech"><span class="chev">▸</span> Technical detail</summary>
+<div class="stack-row">
+<span class="chip">Azure Static Web Apps</span>
+<span class="chip">Entra External ID (MSAL.js/PKCE)</span>
+<span class="chip">Key Vault</span>
+<span class="chip">Table Storage</span>
+<span class="chip">GitHub Actions CI/CD</span>
+</div>
+<ul class="proof-list">
+<li><strong>Zero-data-egress design</strong> — client Jira data is processed and never persisted outside the customer's own tenant boundary.</li>
+<li><strong>Full CI/CD via GitHub Actions</strong> to Azure Static Web Apps, with an Entra External ID + MSAL.js PKCE auth flow.</li>
+<li><strong>Vanilla-JS front end with no build step</strong> — deliberately zero-dependency for long-term maintainability.</li>
+</ul>
+</details>
+</div>
+</div>
+
+<!-- PACELINE (promoted to flagship) -->
+<div class="app-card">
+<div class="app-head">
+<div>
+<div class="app-num">Application 03</div>
+<h2>Paceline</h2>
+<div class="app-tag">Engagement-health &amp; margin-intelligence engine for professional-services firms</div>
+</div>
+<div class="status-pill proto">Working Prototype</div>
+</div>
+<div class="app-body">
+<div class="plain-lede">Margin intelligence for consultancies and agencies. It turns the timesheet and sprint data a firm already has into <strong>earned-value health signals, a prioritized morning brief, and dollar-denominated forecasts</strong> — so a delivery lead sees which engagements are losing margin, and why, before it's too late to fix.</div>
+<div class="shot-row shot-row-single">
+<a class="shot-link" href="javascript:void(0)" onclick="openCarousel(0)"><figure class="shot shot-thumb">
+<img src="/paceline/paceline-01-connect.png" alt="Paceline product walkthrough — Connect, Morning Brief, Portfolio, Drill-down, Ask Pacer, Share — with EVM metrics" loading="lazy"/>
+<figcaption>A six-screen walkthrough — Connect → Morning Brief → Portfolio → Drill-down → Ask Pacer → Share — with earned-value metrics (CPI/SPI/PAC/EAC) per engagement. <em>Screens captured from a bundled demo dataset (synthetic data); working prototype.</em></figcaption>
+</figure></a>
+</div>
+<div class="shot-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Click to enlarge the full walkthrough</div>
+<details>
+<summary class="reveal-tech"><span class="chev">▸</span> Technical detail</summary>
+<div class="stack-row">
+<span class="chip">CloudFront + S3 (SPA)</span>
+<span class="chip">Cognito PKCE</span>
+<span class="chip">API Gateway + Lambda</span>
+<span class="chip">S3 JSON persistence</span>
+</div>
+<ul class="proof-list">
+<li><strong>EVM-style signal engine</strong> — computes CPI/SPI/EAC/PAC per engagement and fires deterministic signals: revenue at risk, margin erosion, schedule slip, team over-burn, retainer over-service.</li>
+<li><strong>Fully AWS-native static SPA</strong> with a same-origin <code>/api/*</code> surface backed by API Gateway + Lambda, single JSON-document-per-firm persistence in S3.</li>
+<li><strong>Four methodologies scored natively</strong> — phase-gate, hybrid EV, Scrum, and Kanban, each with its own risk vocabulary.</li>
+<li><strong>Grounded "Ask Pacer" assistant</strong> — scoped to answer only from computed evidence, not general-purpose chat; an evidence panel traces every fired signal to its driving metric, phase, and team member.</li>
+</ul>
+<div class="scope-note">Scope note: working prototype on a synthetic demo dataset — deliberately distinguished from the production apps (CareerIQ, Delivery Insights). Enterprise SignalCore engine is decoupled and gated on an IP opinion letter.</div>
+</details>
+</div>
+</div>
+
+</div><!-- /apps-grid -->
+</div>
+
+<!-- ALSO BUILDING — compact strip for the remaining builds -->
+<div class="section" style="padding-top:40px;">
+<div class="section-label">Also Building</div>
+<div class="section-title">Still in the Workshop</div>
+<div class="section-sub">Earlier-stage builds and the shared service behind them. Full technical depth available on request or in the repos — expand any card for detail.</div>
+<div class="also-grid">
+
+<div class="also-card">
+<div class="also-head"><h3>Northline</h3><span class="status-pill dev">Active Dev</span></div>
+<div class="also-sub">Program/PI health dashboard with a 9-rule deterministic risk engine, Monte Carlo forecasting, and a Gantt roadmap view.</div>
+<div class="also-stack"><span class="chip">FastAPI + PostgreSQL</span><span class="chip">Next.js 16 / React 19</span><span class="chip">Azure Container Apps</span><span class="chip">Bicep IaC</span></div>
+<details><summary class="also-expand">Expand detail ▸</summary><div class="also-detail"><ul>
+<li><strong>Parallel LLM orchestration</strong> — 8 analysis sections run concurrently via <code>asyncio.TaskGroup</code>, multiplexed onto one SSE stream with per-section timeout/error isolation.</li>
+<li><strong>Human-in-the-loop regeneration</strong> — any section can be re-run independently after review.</li>
+<li><strong>Property-based backend testing</strong> (pytest + Hypothesis).</li>
+<li><em>Scope note:</em> parallel LLM orchestration, not multi-agent AI.</li>
+</ul></div></details>
+</div>
+
+<div class="also-card">
+<div class="also-head"><h3>Keel Watch</h3><span class="status-pill proto">Pilot-Ready</span></div>
+<div class="also-sub">Contract-renewal risk agent for SMB agencies. Reads a signed PDF + email thread and delivers a cited renewal-risk brief and draft outreach — nothing sends without sign-off.</div>
+<div class="also-stack"><span class="chip">Node.js</span><span class="chip">AWS Bedrock (Claude)</span><span class="chip">MCP Server</span><span class="chip">pdf-parse</span></div>
+<details><summary class="also-expand">Expand detail ▸</summary><div class="also-detail"><ul>
+<li><strong>Evidence-ledger architecture</strong> — every claim cites a <code>sourceRef</code> (clause + page or email date); ungrounded assertions are structurally impossible.</li>
+<li><strong>MCP tool wrapper</strong> — the whole pipeline is a callable tool any MCP agent can invoke.</li>
+<li><strong>Provider-agnostic LLM layer</strong> — Bedrock default, OpenAI/Azure swappable.</li>
+<li><em>Scope note:</em> 33/43 tasks complete, all technical build done; first product in the KeelAI family.</li>
+</ul></div></details>
+</div>
+
+<div class="also-card">
+<div class="also-head"><h3>Investigator Agent</h3><span class="status-pill svc">Shared Service</span></div>
+<div class="also-sub">A real tool-calling agent (not a prompt wrapper) backing Paceline and Northline — a bounded reason→tool→observe loop, capped at 3 calls / 20s, with a circuit breaker and audit trail.</div>
+<div class="also-stack"><span class="chip">Fastify (Node)</span><span class="chip">AWS App Runner</span><span class="chip">DynamoDB</span><span class="chip chip-purple">Bedrock / OpenAI / Azure</span></div>
+<details><summary class="also-expand">Expand detail ▸</summary><div class="also-detail"><ul>
+<li><strong>Grounding enforced in code</strong> — recommendations without retrieved tool evidence are rejected and tagged <code>ungrounded-fallback</code>.</li>
+<li><strong>Two-layer feature-gate governance</strong> — either host app degrades gracefully if the agent is disabled.</li>
+<li><strong>Live cross-cloud migration</strong> — Azure Container Apps → AWS App Runner via Docker → ECR.</li>
+<li><strong>Hands-on IAM debugging</strong> — diagnosed a live 403-on-write traced to an execution-role gap.</li>
+</ul></div></details>
+</div>
+
+</div>
+</div>
+
+<!-- ABOUT -->
+<div class="section" id="about" style="padding-top:0; padding-bottom:0;">
+<div class="section-label">About</div>
+<div class="section-title">The Full Picture</div>
+<div class="section-sub">The builds are one part of a 15-year delivery track record. The business outcomes below are the context.</div>
+
+<!-- NEW: surface the business wins near the top of About -->
+<div class="wins-row">
+<div class="win-card"><div class="win-num">$30M</div><div class="win-label">Audit-penalty exposure managed on a legacy-platform convergence</div></div>
+<div class="win-card"><div class="win-num">$105K → $265K</div><div class="win-label">Grew a client engagement 151% — and closed it 22% under budget</div></div>
+<div class="win-card"><div class="win-num">$5.2M</div><div class="win-label">Revenue opportunity unlocked via a Home Health build with a national payer</div></div>
+</div>
+
+<div class="context-block">
+<h4>🎯 Positioning</h4>
+<p>A program manager who uses AI tools to expand his own judgment — <strong>not a career change to engineering</strong>. The builds above are the evidence; the 15-year delivery track record is the context.</p>
+</div>
+<div class="context-block" style="border-left-color:var(--amber); border-color:#F5C99A; background:var(--amber-lite);">
+<h4 style="color:var(--amber);">📋 Core Credentials</h4>
+<p><strong>MBA · PMP · SAFe LPM · AWS Certified Cloud Practitioner · CSPO · CSM</strong><br/>
+15+ years in enterprise technology consulting delivery | Legacy-platform convergence with $30M in audit-penalty exposure | Cross-functional team leadership (14 teams) | Financial governance of $8M–$28M portfolios</p>
+</div>
+<div style="text-align:center; margin-top:36px; margin-bottom:8px;">
+<p style="font-size:11px; color:var(--light); line-height:1.7;">All technical claims verified against source code, infrastructure configs, or live deployment logs as of July 2026.<br/>Status labels (Production / Active Development / Working Prototype / Pilot-Ready) are accurate as of this date.</p>
+</div>
+</div>
 
 </div><!-- /container -->
 
-
-
 <!-- FOOTER -->
-
 <footer>
-
-  <div class="footer-name">Christopher McCourt</div>
-
-  <div class="footer-sub">MBA · PMP · SAFe LPM · AWS CCP · Nashville, TN</div>
-
-  <div class="footer-links">
-
-    <a href="mailto:chris@cmccourt.net"><i class="fa-solid fa-envelope"></i> chris@cmccourt.net</a>
-
-    <a href="https://linkedin.com/in/cmccourt" target="_blank"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/cmccourt</a>
-
-    <a href="https://github.com/chrismc89" target="_blank"><i class="fa-brands fa-github"></i> github.com/chrismc89</a>
-
-  </div>
-
-  <div class="copyright">© 2026 Christopher McCourt · Built and deployed solo · Last updated July 2026</div>
-
+<div class="footer-name">Christopher McCourt</div>
+<div class="footer-sub">MBA · PMP · SAFe LPM · AWS CCP · Nashville, TN</div>
+<div class="footer-links">
+<a href="/ChristopherMcCourt-Resume.pdf" target="_blank"><i class="fa-solid fa-file-arrow-down"></i> Download Résumé</a>
+<a href="mailto:chris@cmccourt.net"><i class="fa-solid fa-envelope"></i> chris@cmccourt.net</a>
+<a href="https://linkedin.com/in/cmccourt" target="_blank"><i class="fa-brands fa-linkedin"></i> linkedin.com/in/cmccourt</a>
+<a href="https://github.com/chrismc89" target="_blank"><i class="fa-brands fa-github"></i> github.com/chrismc89</a>
+</div>
+<div class="copyright">© 2026 Christopher McCourt · Built and deployed solo · Last updated 2026</div>
 </footer>
+<!-- Pure-CSS :target lightboxes (no JavaScript) -->
+<a id="lb-brief" class="lightbox" href="#_"><span class="lightbox-close">&times;</span><img src="/pm-agent-morning-brief.png" alt="PM Agent Morning Brief — enlarged"/></a>
+<a id="lb-tools" class="lightbox" href="#_"><span class="lightbox-close">&times;</span><img src="/pm-agent-tools-infographic.png" alt="PM Agent tool catalog — enlarged"/></a>
+<!-- Paceline carousel modal -->
+<div class="cr-modal" id="paceCarousel" role="dialog" aria-modal="true" aria-label="Paceline walkthrough">
+<button class="cr-close" onclick="closeCarousel()" aria-label="Close">&times;</button>
+<button class="cr-nav cr-prev" onclick="moveCarousel(-1)" aria-label="Previous">&#10094;</button>
+<div class="cr-stage" id="crStage">
+<figure class="cr-slide" data-idx="0"><img src="/paceline/paceline-01-connect.png" alt="Paceline — Plug in the tools you already use" loading="lazy"/><figcaption><span class="cr-step">1 / 7</span> <strong>Connect</strong> — Plug in the tools you already use</figcaption></figure>
+<figure class="cr-slide" data-idx="1"><img src="/paceline/paceline-02-morning-brief.png" alt="Paceline — Start the day knowing what needs you" loading="lazy"/><figcaption><span class="cr-step">2 / 7</span> <strong>Morning Brief</strong> — Start the day knowing what needs you</figcaption></figure>
+<figure class="cr-slide" data-idx="2"><img src="/paceline/paceline-03-portfolio.png" alt="Paceline — Every engagement, one honest row" loading="lazy"/><figcaption><span class="cr-step">3 / 7</span> <strong>Portfolio</strong> — Every engagement, one honest row</figcaption></figure>
+<figure class="cr-slide" data-idx="3"><img src="/paceline/paceline-04-drilldown.png" alt="Paceline — See why, not just that" loading="lazy"/><figcaption><span class="cr-step">4 / 7</span> <strong>Drill-down</strong> — See why, not just that</figcaption></figure>
+<figure class="cr-slide" data-idx="4"><img src="/paceline/paceline-05-ask-pacer.png" alt="Paceline — Ask questions in plain English" loading="lazy"/><figcaption><span class="cr-step">5 / 7</span> <strong>Ask Pacer</strong> — Ask questions in plain English</figcaption></figure>
+<figure class="cr-slide" data-idx="5"><img src="/paceline/paceline-06-share.png" alt="Paceline — Tell clients and leaders the right story" loading="lazy"/><figcaption><span class="cr-step">6 / 7</span> <strong>Share</strong> — Tell clients and leaders the right story</figcaption></figure>
+<figure class="cr-slide" data-idx="6"><img src="/paceline/paceline-07-summary.png" alt="Paceline — How each engagement is scored — and what the firm gets" loading="lazy"/><figcaption><span class="cr-step">7 / 7</span> <strong>Scored & Outcomes</strong> — How each engagement is scored — and what the firm gets</figcaption></figure>
+</div>
+<button class="cr-nav cr-next" onclick="moveCarousel(1)" aria-label="Next">&#10095;</button>
+<div class="cr-dots"><button class="cr-dot" data-idx="0" onclick="goCarousel(0)" aria-label="Go to slide 1"></button><button class="cr-dot" data-idx="1" onclick="goCarousel(1)" aria-label="Go to slide 2"></button><button class="cr-dot" data-idx="2" onclick="goCarousel(2)" aria-label="Go to slide 3"></button><button class="cr-dot" data-idx="3" onclick="goCarousel(3)" aria-label="Go to slide 4"></button><button class="cr-dot" data-idx="4" onclick="goCarousel(4)" aria-label="Go to slide 5"></button><button class="cr-dot" data-idx="5" onclick="goCarousel(5)" aria-label="Go to slide 6"></button><button class="cr-dot" data-idx="6" onclick="goCarousel(6)" aria-label="Go to slide 7"></button></div>
+</div>
 
-
-
+<script>
+(function(){
+  var cur = 0, total = 7, modal, slides, dots;
+  function init(){ modal = document.getElementById('paceCarousel'); slides = modal.querySelectorAll('.cr-slide'); dots = modal.querySelectorAll('.cr-dot'); }
+  function render(){ for (var i=0;i<slides.length;i++){ slides[i].classList.toggle('active', i===cur); dots[i].classList.toggle('active', i===cur); } }
+  window.openCarousel = function(i){ if(!modal) init(); cur = i||0; modal.classList.add('open'); document.body.style.overflow='hidden'; render(); };
+  window.closeCarousel = function(){ if(modal){ modal.classList.remove('open'); document.body.style.overflow=''; } };
+  window.moveCarousel = function(d){ cur = (cur + d + total) % total; render(); };
+  window.goCarousel = function(i){ cur = i; render(); };
+  document.addEventListener('keydown', function(e){
+    if(!modal || !modal.classList.contains('open')) return;
+    if(e.key==='Escape') closeCarousel();
+    else if(e.key==='ArrowRight') moveCarousel(1);
+    else if(e.key==='ArrowLeft') moveCarousel(-1);
+  });
+  document.addEventListener('click', function(e){ if(modal && e.target===modal) closeCarousel(); });
+})();
+</script>
 </body>
-
 </html>
-
