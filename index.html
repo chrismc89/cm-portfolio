@@ -321,7 +321,7 @@ footer .copyright { margin-top: 20px; font-size: 10.5px; color: #334155; }
 </figure></a>
 <a class="shot-link" href="#lb-tools"><figure class="shot shot-thumb">
 <img src="/pm-agent-tools-infographic.png" alt="PM Agent tool catalog — 20 tools across 6 groups, each tagged for Product or Delivery audiences" loading="lazy"/>
-<figcaption>The tool catalog — <strong>20 tools</strong> across 6 groups, each tagged P (Product) or D (Delivery).</figcaption>
+<figcaption>The tool catalog — the original <strong>20 tools across 6 groups</strong>, each tagged P (Product) or D (Delivery). A 7th group, Data Ingestion (4 tools), was added since, bringing the total to 24.</figcaption>
 </figure></a>
 </div>
 <div class="shot-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Click either to enlarge</div>
@@ -329,7 +329,7 @@ footer .copyright { margin-top: 20px; font-size: 10.5px; color: #334155; }
 <summary class="reveal-tech"><span class="chev">▸</span> Technical detail</summary>
 <div class="stack-row">
 <span class="chip chip-purple">FastAPI (Python)</span>
-<span class="chip chip-purple">MCP Server (20 tools)</span>
+<span class="chip chip-purple">MCP Server (24 tools)</span>
 <span class="chip chip-purple">AWS App Runner</span>
 <span class="chip chip-purple">Docker → ECR</span>
 <span class="chip chip-purple">PostgreSQL + pgvector</span>
@@ -338,7 +338,7 @@ footer .copyright { margin-top: 20px; font-size: 10.5px; color: #334155; }
 <span class="chip chip-purple">Amazon Bedrock</span>
 </div>
 <ul class="proof-list">
-<li><strong style="color:#F1F5F9;">20 MCP tools</strong> across 6 functional groups, role-filtered for two audiences — Product (roadmap, scope, release) and Delivery (risk, flow, people, ops) — each user sees only the tools that fit their job via <code>get_my_tools</code>.</li>
+<li><strong style="color:#F1F5F9;">24 MCP tools across 7 functional groups</strong> — Portfolio Visibility, Risk Intelligence, Roadmap &amp; Release, People &amp; Reporting, Scoring Operations, Personalization, and Data Ingestion. Role-filtered for two audiences — Product (roadmap, scope, release) and Delivery (risk, flow, people, ops) — each user sees only the tools that fit their job via <code>get_my_tools</code>.</li>
 <li><strong style="color:#F1F5F9;">10-layer pipeline</strong>: Jira ingest → normalization → PostgreSQL → deterministic risk engine (Tier 1, always on) → LLM judgment (Tier 2, on demand) → analysis → synthesis → Core Agent API → MCP/OpenAPI/Copilot adapters → AI surface.</li>
 <li><strong style="color:#F1F5F9;">Audited LLM adapter</strong> — every Tier-2 call passes a 4-step chain in code: kill switch → governance approval → PII sanitization → audit log. Graceful degradation to Tier-1 rules on any failure.</li>
 <li><strong style="color:#F1F5F9;">NIST AI RMF 1.0 + PMI-CPMAI governance alignment</strong> — explainability, human oversight, data minimization, and lifecycle controls designed in at the architecture level.</li>
