@@ -303,12 +303,12 @@ footer .copyright { margin-top: 20px; font-size: 10.5px; color: #334155; }
 <div class="section-sub">Three production apps and a product-grade prototype. Each has a plain-English summary first; expand "Technical detail" for the architecture evidence.</div>
 <div class="apps-grid">
 
-<!-- PM AGENT -->
+<!-- VESALTA DELIVERY -->
 <div class="app-card dark-card" style="border-color:#2D1F5E;">
 <div class="app-head" style="background:rgba(124,79,209,0.12); border-color:rgba(124,79,209,0.3);">
 <div>
 <div class="app-num" style="color:#7C4FD1;">Application 00 — Featured Build</div>
-<h2 style="color:#F1F5F9;">PM Agent</h2>
+<h2 style="color:#F1F5F9;">Vesalta Delivery</h2>
 <div class="app-tag" style="color:#94A3B8;">Agentic AI project-management system — MCP · FastAPI · 3 AI surfaces</div>
 </div>
 <div class="status-pill svc" style="background:#EDE9FE; color:#6D28D9;">Production · Deployed</div>
@@ -316,17 +316,13 @@ footer .copyright { margin-top: 20px; font-size: 10.5px; color: #334155; }
 <div class="app-body">
 <div class="plain-lede">An agentic AI assistant for delivery managers. It ingests Jira delivery data, scores risk deterministically, then layers AI judgment on top — and runs <strong>inside the tools PMs already use: Claude, ChatGPT, and Microsoft 365 Copilot</strong>. Production, deployed on AWS.</div>
 <!-- Sample outputs: side-by-side thumbnails, click to enlarge -->
-<div class="shot-row">
+<div class="shot-row shot-row-single">
 <a class="shot-link" href="#lb-brief"><figure class="shot shot-thumb">
-<img src="/pm-agent-morning-brief.png" alt="PM Agent Morning Brief — portfolio pulse, blocker spotlight, stale items and suggested next moves" loading="lazy"/>
+<img src="/pm-agent-morning-brief.png" alt="Vesalta Delivery Morning Brief — portfolio pulse, blocker spotlight, stale items and suggested next moves" loading="lazy"/>
 <figcaption>Sample output — a live <strong>morning_brief</strong>: portfolio pulse, the blocker driving the red, and sourced next moves.</figcaption>
 </figure></a>
-<a class="shot-link" href="#lb-tools"><figure class="shot shot-thumb">
-<img src="/pm-agent-tools-infographic.png" alt="PM Agent tool catalog — 20 tools across 6 groups, each tagged for Product or Delivery audiences" loading="lazy"/>
-<figcaption>The tool catalog — the original <strong>20 tools across 6 groups</strong>, each tagged P (Product) or D (Delivery). A 7th group, Data Ingestion (4 tools), was added since, bringing the total to 24.</figcaption>
-</figure></a>
 </div>
-<div class="shot-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Click either to enlarge</div>
+<div class="shot-hint"><i class="fa-solid fa-magnifying-glass-plus"></i> Click to enlarge</div>
 <details>
 <summary class="reveal-tech"><span class="chev">▸</span> Technical detail</summary>
 <div class="stack-row">
@@ -348,7 +344,7 @@ footer .copyright { margin-top: 20px; font-size: 10.5px; color: #334155; }
 <li><strong style="color:#F1F5F9;">Terraform IaC</strong> — ECR repo, App Runner service, EventBridge nightly batch rescore, all declaratively managed.</li>
 </ul>
 </details>
-<div class="scope-note" style="border-color:#2D1F5E; color:#64748B;">Source: <a href="https://github.com/chrismc89/PM-Agent" style="color:#A78BFA;" target="_blank">github.com/chrismc89/PM-Agent</a> · Production · Deployed on AWS App Runner · Technical claims last verified July 2026.</div>
+<div class="scope-note" style="border-color:#2D1F5E; color:#64748B;">Source: <a href="https://github.com/chrismc89/vesalta-delivery" style="color:#A78BFA;" target="_blank">github.com/chrismc89/vesalta-delivery</a> · Production · Deployed on AWS App Runner · Technical claims last verified July 2026.</div>
 </div>
 </div>
 
@@ -472,6 +468,19 @@ footer .copyright { margin-top: 20px; font-size: 10.5px; color: #334155; }
 <div class="also-grid">
 
 <div class="also-card">
+<div class="also-head"><h3>Vesalta Context</h3><span class="status-pill dev">In Development</span></div>
+<div class="also-sub">Organizational-intelligence counterpart to Vesalta Delivery. Surfaces historical evidence, past decisions, and team knowledge so leaders can evaluate current issues with the context behind them.</div>
+<div class="also-stack"><span class="chip">Historical evidence retrieval</span><span class="chip">Agentic (tool-calling)</span><span class="chip">Grounded context</span></div>
+<details><summary class="also-expand">Expand detail ▸</summary><div class="also-detail"><ul>
+<li><strong>Historical evidence retrieval</strong> — find and surface what's already known.</li>
+<li><strong>Previous decisions and outcomes</strong> — learn from what worked and what didn't.</li>
+<li><strong>Organizational knowledge</strong> — connect insights across teams and systems.</li>
+<li><strong>Grounded context for delivery analysis</strong> — the right history at the right time; pairs with Vesalta Delivery.</li>
+<li><em>Scope note:</em> in development; formerly the Historical Data Agent. Repo at github.com/chrismc89/historical-data-agent. No production use, users, or metrics claimed yet.</li>
+</ul></div></details>
+</div>
+
+<div class="also-card">
 <div class="also-head"><h3>Northline</h3><span class="status-pill dev">Active Dev</span></div>
 <div class="also-sub">Program/PI health dashboard with a 9-rule deterministic risk engine, Monte Carlo forecasting, and a Gantt roadmap view.</div>
 <div class="also-stack"><span class="chip">FastAPI + PostgreSQL</span><span class="chip">Next.js 16 / React 19</span><span class="chip">Azure Container Apps</span><span class="chip">Bicep IaC</span></div>
@@ -553,8 +562,7 @@ Currently: Delivery Manager, Insight Global (placed at a Fortune 15 health servi
 <div class="copyright">© 2026 Christopher McCourt · Built and deployed solo · Last updated 2026</div>
 </footer>
 <!-- Pure-CSS :target lightboxes (no JavaScript) -->
-<a id="lb-brief" class="lightbox" href="#_"><span class="lightbox-close">&times;</span><img src="/pm-agent-morning-brief.png" alt="PM Agent Morning Brief — enlarged"/></a>
-<a id="lb-tools" class="lightbox" href="#_"><span class="lightbox-close">&times;</span><img src="/pm-agent-tools-infographic.png" alt="PM Agent tool catalog — enlarged"/></a>
+<a id="lb-brief" class="lightbox" href="#_"><span class="lightbox-close">&times;</span><img src="/pm-agent-morning-brief.png" alt="Vesalta Delivery Morning Brief — enlarged"/></a>
 <!-- Paceline carousel modal -->
 <div class="cr-modal" id="paceCarousel" role="dialog" aria-modal="true" aria-label="Paceline walkthrough">
 <button class="cr-close" onclick="closeCarousel('paceCarousel')" aria-label="Close">&times;</button>
