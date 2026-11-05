@@ -33,6 +33,8 @@ h3{font-size:20px;font-weight:700}
 .text-link{color:var(--primary);font-weight:600;font-size:15px;display:inline-flex;align-items:center;gap:6px}
 .text-link:hover{text-decoration:underline;text-underline-offset:4px}
 :focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
+.skip-link{position:absolute;left:12px;top:-48px;z-index:100;background:var(--primary);color:#fff;padding:10px 16px;border-radius:8px;font-weight:600;font-size:14px;transition:top .16s ease}
+.skip-link:focus{top:12px}
 .icon{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
 
 /* Buttons */
@@ -267,7 +269,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
 </svg>
 
-<a href="#main" class="sr-only" style="position:absolute;left:-9999px">Skip to content</a>
+<a href="#main" class="skip-link">Skip to content</a>
 
 <!-- HEADER -->
 <header>
@@ -346,7 +348,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   <div class="wrap">
     <div class="section-head reveal">
       <div><span class="overline">Featured Work</span><h2>From real problems to working solutions.</h2></div>
-      <a class="text-link" href="/work">View all work <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a>
+      <a class="text-link" href="#work">View all work <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a>
     </div>
 
     <div class="grid-3">
@@ -361,7 +363,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
           <div class="card-sub">Agentic delivery intelligence</div>
           <p class="card-desc">Turn delivery data and organizational knowledge into better decisions. The shipped, production product is Vesalta Delivery; Vesalta Context is in development.</p>
           <div class="tags"><span class="tag">AI</span><span class="tag">AWS</span><span class="tag">MCP</span><span class="tag">FastAPI</span></div>
-          <a class="text-link" href="/work/vesalta">Explore Vesalta <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a>
+          <a class="text-link" href="#vesalta-system">Explore Vesalta <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a>
         </div>
       </article>
 
@@ -376,7 +378,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
           <div class="card-sub">AI career intelligence</div>
           <p class="card-desc">One profile connecting résumé analysis, company research, application strategy and interview preparation.</p>
           <div class="tags"><span class="tag">AWS</span><span class="tag">Lambda</span><span class="tag">Cognito</span><span class="tag">Anthropic</span></div>
-          <a class="text-link" href="/work/verable">View project <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a>
+          <a class="text-link" href="https://github.com/chrismc89" target="_blank" rel="noopener">View on GitHub <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a>
         </div>
       </article>
 
@@ -393,7 +395,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
           <div class="card-sub">Delivery analytics</div>
           <p class="card-desc">Turn Jira exports into earned-value and flow intelligence across multiple delivery frameworks.</p>
           <div class="tags"><span class="tag">Azure</span><span class="tag">Jira</span><span class="tag">Analytics</span></div>
-          <a class="text-link" href="/work/delivery-insights">View project <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a>
+          <a class="text-link" href="https://github.com/chrismc89" target="_blank" rel="noopener">View on GitHub <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a>
         </div>
       </article>
     </div>
@@ -401,12 +403,12 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 </section>
 
 <!-- VESALTA SYSTEM -->
-<section class="section" style="padding-top:0">
+<section class="section" id="vesalta-system" style="padding-top:0">
   <div class="wrap">
     <div class="system reveal">
       <div class="section-head">
         <div><span class="overline">The Vesalta System</span><h2>From organizational memory to delivery action.</h2></div>
-        <a class="text-link" href="/work/vesalta">Explore the system <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a>
+        <a class="text-link" href="https://github.com/chrismc89/vesalta-delivery" target="_blank" rel="noopener">Explore the system <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a>
       </div>
       <div class="system-grid">
         <div class="sys-panel sys-context">
@@ -493,13 +495,13 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   <div class="wrap">
     <div class="section-head reveal">
       <div><span class="overline">Experiments &amp; Builds</span><h2>More work in progress.</h2></div>
-      <a class="text-link" href="/work">View all work <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a>
+      <a class="text-link" href="https://github.com/chrismc89" target="_blank" rel="noopener">View all work <svg class="icon" style="width:16px;height:16px"><use href="#i-arrow"/></svg></a>
     </div>
     <div class="grid-4m">
-      <a class="small-card reveal" href="/work/paceline"><span class="status s-proto">Prototype</span><h3>Paceline</h3><p>Margin intelligence.</p></a>
-      <a class="small-card reveal" href="/work/northline"><span class="status s-dev">Active Development</span><h3>Northline</h3><p>Program and PI health.</p></a>
-      <a class="small-card reveal" href="/work/keel-watch"><span class="status s-pilot">Pilot Ready</span><h3>Keel Watch</h3><p>Renewal-risk intelligence.</p></a>
-      <a class="small-card reveal" href="/work/investigator-agent"><span class="status s-shared">Shared Service</span><h3>Investigator Agent</h3><p>Shared agentic capability.</p></a>
+      <a class="small-card reveal" href="https://github.com/chrismc89" target="_blank" rel="noopener"><span class="status s-proto">Prototype</span><h3>Paceline</h3><p>Margin intelligence.</p></a>
+      <a class="small-card reveal" href="https://github.com/chrismc89" target="_blank" rel="noopener"><span class="status s-dev">Active Development</span><h3>Northline</h3><p>Program and PI health.</p></a>
+      <a class="small-card reveal" href="https://github.com/chrismc89" target="_blank" rel="noopener"><span class="status s-pilot">Pilot Ready</span><h3>Keel Watch</h3><p>Renewal-risk intelligence.</p></a>
+      <a class="small-card reveal" href="https://github.com/chrismc89" target="_blank" rel="noopener"><span class="status s-shared">Shared Service</span><h3>Investigator Agent</h3><p>Shared agentic capability.</p></a>
     </div>
   </div>
 </section>

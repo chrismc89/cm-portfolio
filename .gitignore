@@ -3,3 +3,8 @@ Thumbs.db
 
 # Local preview copy — not deployed
 preview/
+# Design spec + reference (local build docs, not deployed)
+.design/
+
+# Git worktrees used for agent workflows
+.worktrees/
