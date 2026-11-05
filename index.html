@@ -28,8 +28,8 @@ h1,h2,h3{color:var(--navy);line-height:1.12;letter-spacing:-.02em}
 h2{font-size:clamp(28px,3vw,38px);font-weight:750}
 h3{font-size:20px;font-weight:700}
 .overline{font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--primary);margin-bottom:10px;display:block}
-.section{padding:88px 0}
-.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:36px;flex-wrap:wrap}
+.section{padding:64px 0}
+.section-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:28px;flex-wrap:wrap}
 .text-link{color:var(--primary);font-weight:600;font-size:15px;display:inline-flex;align-items:center;gap:6px}
 .text-link:hover{text-decoration:underline;text-underline-offset:4px}
 :focus-visible{outline:3px solid var(--teal);outline-offset:3px;border-radius:6px}
@@ -58,7 +58,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .menu-btn{display:none;background:none;border:0;width:44px;height:44px;color:var(--navy);cursor:pointer}
 
 /* Hero */
-.hero{background:linear-gradient(180deg,#fff 0%,#F6F9FB 100%);padding:72px 0 0;overflow:hidden}
+.hero{background:linear-gradient(180deg,#fff 0%,#F6F9FB 100%);padding:56px 0 0;overflow:hidden}
 .hero-grid{display:grid;grid-template-columns:46fr 54fr;gap:48px;align-items:center}
 .hero h1{font-size:clamp(40px,4.6vw,60px);font-weight:800;line-height:1.04;margin:6px 0 24px}
 .hero h1 em{font-style:normal;color:var(--primary);display:block}
@@ -91,7 +91,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .dot{width:8px;height:8px;border-radius:50%;display:inline-block}
 
 /* Proof strip */
-.proof{position:relative;margin-top:56px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding-bottom:8px}
+.proof{position:relative;margin-top:40px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding-bottom:8px}
 .proof-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:20px 24px;display:flex;align-items:center;gap:16px}
 .proof-card .icon{width:30px;height:30px;color:var(--primary);stroke-width:1.6}
 .proof-num{font-size:28px;font-weight:800;color:var(--navy);line-height:1}
@@ -197,7 +197,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .cta h2 span{color:var(--primary);display:block}
 .cta-links{display:flex;justify-content:center;gap:24px;margin-top:22px;font-size:14px;font-weight:600}
 .cta-links a:hover{color:var(--primary)}
-footer{padding:32px 0;border-top:1px solid var(--border);font-size:13px;color:var(--muted);margin-top:88px}
+footer{padding:32px 0;border-top:1px solid var(--border);font-size:13px;color:var(--muted);margin-top:56px}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
 /* Reveal */
@@ -230,8 +230,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 }
 @media (max-width:767px){
   :root{--wrap:calc(100% - 40px)}
-  .section{padding:60px 0}
-  .hero{padding-top:44px}
+  .section{padding:52px 0}
+  .hero{padding-top:36px}
   .grid-3,.grid-4m{grid-template-columns:1fr}
   .flow{grid-template-columns:1fr 1fr;row-gap:28px}
   .flow-line{display:none}
