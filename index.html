@@ -117,6 +117,12 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .tag{font-size:12px;font-weight:500;color:var(--slate);background:var(--background);border:1px solid var(--border);padding:3px 10px;border-radius:999px}
 .card-body .text-link{margin-top:auto;padding-top:8px}
 
+/* Featured cards: side-by-side layout (text left, screenshot right) */
+.grid-feat .project-card{flex-direction:row;align-items:stretch}
+.grid-feat .card-body{order:1;flex:1 1 52%;min-width:0}
+.grid-feat .shot{order:2;flex:0 0 46%;aspect-ratio:auto;height:auto;align-self:stretch;border-bottom:none;border-left:1px solid var(--border)}
+.grid-feat .shot-img img{height:100%}
+
 /* Screenshot areas (real images where available, styled placeholder otherwise) */
 .shot{aspect-ratio:16/10;background:#F6F9FB;border-bottom:1px solid var(--border);padding:18px;display:flex;gap:12px}
 .shot-img{padding:0}
@@ -217,6 +223,8 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   .proof,.grid-4{grid-template-columns:repeat(2,1fr)}
   .grid-3{grid-template-columns:1fr 1fr}
   .grid-feat{grid-template-columns:1fr}
+  .grid-feat .project-card{flex-direction:column}
+  .grid-feat .shot{flex:auto;aspect-ratio:16/10;border-left:none;border-bottom:1px solid var(--border)}
   .grid-3 .flagship{grid-column:1/-1}
   .system-grid{grid-template-columns:1fr}
   .sys-mid{max-width:none;flex-direction:row}
@@ -280,7 +288,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     <a href="#" class="brand" aria-label="Christopher McCourt home"><span class="brand-mark">CM</span>Christopher McCourt</a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#" aria-current="page">Home</a></li>
-      <li><a href="#work">Work</a></li>
+      <li><a href="#work">Projects</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="/ChristopherMcCourt-Resume.pdf">Résumé</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -306,7 +314,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
         <p class="hero-lead">15+ years leading complex, cross-functional technology delivery, with hands-on AI and cloud builds that help me understand what engineering teams actually ship.</p>
         <div class="hero-ctas">
           <a class="btn btn-primary" href="#work">View My Work <svg class="icon"><use href="#i-down"/></svg></a>
-          <a class="btn btn-secondary" href="/ChristopherMcCourt-Resume.pdf">Download Résumé</a>
+          <a class="btn btn-secondary" href="mailto:chris@cmccourt.net">Get in Touch</a>
         </div>
         <div class="hero-meta">
           <span><svg class="icon"><use href="#i-pin"/></svg>Nashville, TN · hybrid/remote</span>
