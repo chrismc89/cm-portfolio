@@ -164,10 +164,32 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .sys-context .icon{color:#1D4ED8}.sys-delivery .icon{color:var(--primary)}
 .sys-panel h3{font-size:24px}
 .sys-context h3 span{color:#1D4ED8}.sys-delivery h3 span{color:var(--primary)}
-.sys-tagline{font-size:17px;color:var(--slate);margin:6px 0 18px}
+.sys-tagline{font-size:17px;color:var(--slate);margin:6px 0 10px}
 .checks{list-style:none;display:grid;gap:9px;font-size:15px}
 .checks li{display:flex;gap:10px;align-items:center}
 .checks .icon{width:18px;height:18px;margin:0}
+/* Rich system panel additions */
+.sys-panel-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.sys-num{font-size:13px;font-weight:800;color:var(--muted);letter-spacing:.04em}
+.sys-badge{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+.sys-badge-dev{color:var(--amber);background:var(--amber-bg)}
+.sys-badge-prod{color:var(--success);background:var(--success-bg)}
+.sys-kicker{margin-left:auto;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.sys-desc{font-size:14px;line-height:1.55;color:var(--text);margin-bottom:18px}
+.checks-rich{gap:14px}
+.checks-rich li{align-items:flex-start}
+.checks-rich .icon{margin-top:3px}
+.sys-context .checks-rich .icon{color:#1D4ED8}
+.sys-delivery .checks-rich .icon{color:var(--primary)}
+.checks-rich>li>span{display:flex;flex-direction:column;gap:2px;font-size:13px;color:var(--text);line-height:1.45}
+.checks-rich strong{font-size:14px;color:var(--navy);font-weight:700}
+.sys-flow-note{margin-top:20px;padding-top:16px;border-top:1px solid rgba(15,23,42,.08);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--slate)}
+.sys-flow-note span{color:var(--teal);margin:0 4px}
+.sys-context .sys-flow-note span{color:#1D4ED8}
+.sys-impl{margin-top:12px;font-size:13px;color:var(--muted)}
+.sys-impl strong{color:var(--navy);font-weight:700}
+.sys-context .sys-impl strong{color:#1D4ED8}
+.sys-delivery .sys-impl strong{color:var(--primary)}
 .sys-mid{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--slate);max-width:150px}
 .sys-arrow{color:var(--teal)}.sys-arrow .icon{width:40px;height:40px}
 .sys-foot{margin-top:28px;text-align:center;font-size:12px;font-weight:700;letter-spacing:.18em;color:var(--primary)}
@@ -419,27 +441,43 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
       </div>
       <div class="system-grid">
         <div class="sys-panel sys-context">
+          <div class="sys-panel-head">
+            <span class="sys-num">01</span>
+            <span class="sys-badge sys-badge-dev">In Development</span>
+            <span class="sys-kicker">Organizational Intelligence</span>
+          </div>
           <svg class="icon"><use href="#i-layers"/></svg>
           <h3>Vesalta <span>Context</span></h3>
           <p class="sys-tagline">Understand what led here.</p>
-          <ul class="checks">
-            <li><svg class="icon"><use href="#i-check"/></svg>Historical evidence</li>
-            <li><svg class="icon"><use href="#i-check"/></svg>Past decisions</li>
-            <li><svg class="icon"><use href="#i-check"/></svg>Organizational knowledge</li>
-            <li><svg class="icon"><use href="#i-check"/></svg>Relevant context</li>
+          <p class="sys-desc">Brings relevant historical evidence, previous decisions, and organizational knowledge into the current work so leaders can evaluate issues with the context behind them.</p>
+          <ul class="checks checks-rich">
+            <li><svg class="icon"><use href="#i-check"/></svg><span><strong>Historical evidence retrieval</strong>Find and surface what's already known.</span></li>
+            <li><svg class="icon"><use href="#i-check"/></svg><span><strong>Previous decisions and outcomes</strong>Learn from what worked — and what didn't.</span></li>
+            <li><svg class="icon"><use href="#i-check"/></svg><span><strong>Organizational knowledge</strong>Connect insights across teams and systems.</span></li>
+            <li><svg class="icon"><use href="#i-check"/></svg><span><strong>Grounded context for delivery analysis</strong>The right history, at the right time.</span></li>
           </ul>
+          <p class="sys-flow-note">Organizational memory <span>→</span> usable context</p>
+          <p class="sys-impl">Implementation: <strong>Historical Data Agent</strong></p>
         </div>
         <div class="sys-mid"><span>SAME DATA.<br>MORE CONTEXT.<br>BETTER DECISIONS.</span><span class="sys-arrow"><svg class="icon"><use href="#i-arrow"/></svg></span></div>
         <div class="sys-panel sys-delivery">
+          <div class="sys-panel-head">
+            <span class="sys-num">02</span>
+            <span class="sys-badge sys-badge-prod">Production</span>
+            <span class="sys-kicker">Delivery Intelligence</span>
+          </div>
           <svg class="icon"><use href="#i-rocket"/></svg>
           <h3>Vesalta <span>Delivery</span></h3>
           <p class="sys-tagline">See what needs attention next.</p>
-          <ul class="checks">
-            <li><svg class="icon"><use href="#i-check"/></svg>Delivery signals</li>
-            <li><svg class="icon"><use href="#i-check"/></svg>Risk intelligence</li>
-            <li><svg class="icon"><use href="#i-check"/></svg>Governed AI analysis</li>
-            <li><svg class="icon"><use href="#i-check"/></svg>Recommended actions</li>
+          <p class="sys-desc">Transforms current delivery data into risk intelligence and decision support. It applies deterministic analysis first, then makes governed AI judgment available for deeper analysis — inside the tools PMs already use.</p>
+          <ul class="checks checks-rich">
+            <li><svg class="icon"><use href="#i-check"/></svg><span><strong>Delivery signals from Jira</strong>Ingest and normalize delivery data.</span></li>
+            <li><svg class="icon"><use href="#i-check"/></svg><span><strong>Deterministic risk scoring (Tier 1)</strong>Always-on rules and thresholds.</span></li>
+            <li><svg class="icon"><use href="#i-check"/></svg><span><strong>Governed AI judgment (Tier 2)</strong>Bounded AI judgment with oversight.</span></li>
+            <li><svg class="icon"><use href="#i-check"/></svg><span><strong>Actionable decision support</strong>Clear insights with evidence-linked sources.</span></li>
           </ul>
+          <p class="sys-flow-note">Delivery signals <span>→</span> risk <span>→</span> action</p>
+          <p class="sys-impl">Implementation: <strong>Vesalta Delivery</strong></p>
         </div>
       </div>
       <p class="sys-foot">CONTEXT &nbsp;→&nbsp; DELIVERY &nbsp;→&nbsp; BETTER DECISIONS</p>
