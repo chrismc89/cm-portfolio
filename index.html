@@ -123,6 +123,22 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .grid-feat .shot{order:2;flex:0 0 46%;aspect-ratio:auto;height:auto;align-self:stretch;border-bottom:none;border-left:1px solid var(--border)}
 .grid-feat .shot-img img{height:100%}
 
+/* Clickable screenshot → lightbox */
+.shot-zoom{position:relative;cursor:zoom-in;display:block}
+.shot-zoom .zoom-hint{position:absolute;top:10px;right:10px;width:30px;height:30px;border-radius:8px;background:rgba(15,23,42,.6);color:#fff;display:grid;place-items:center;opacity:0;transition:opacity .16s}
+.shot-zoom .zoom-hint .icon{width:16px;height:16px;stroke:#fff}
+.shot-zoom:hover .zoom-hint,.shot-zoom:focus-visible .zoom-hint{opacity:1}
+/* Wide banner images (e.g. Verable 3:1) shown whole, not cropped */
+.shot-contain{background:#fff;display:flex;align-items:center;justify-content:center;padding:14px}
+.grid-feat .shot-contain img{height:auto;max-height:100%;object-fit:contain;object-position:center}
+
+/* Lightbox (pure CSS :target) */
+.lightbox{display:none;position:fixed;inset:0;z-index:1000;background:rgba(8,12,20,.92);align-items:center;justify-content:center;padding:32px;cursor:zoom-out}
+.lightbox:target{display:flex}
+.lightbox img{max-width:95vw;max-height:92vh;width:auto;height:auto;border-radius:10px;box-shadow:0 12px 48px rgba(0,0,0,.5);background:#fff}
+.lightbox-close{position:absolute;top:18px;right:26px;font-size:34px;line-height:1;color:#CBD5E1;font-weight:300}
+.lightbox:hover .lightbox-close{color:#fff}
+
 /* Screenshot areas (real images where available, styled placeholder otherwise) */
 .shot{aspect-ratio:16/10;background:#F6F9FB;border-bottom:1px solid var(--border);padding:18px;display:flex;gap:12px}
 .shot-img{padding:0}
@@ -278,6 +294,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   <symbol id="i-dollar" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8M12 18V6"/></symbol>
   <symbol id="i-cloud" viewBox="0 0 24 24"><path d="M17.5 19H9a7 7 0 1 1 6.7-9h1.8a4.5 4.5 0 1 1 0 9z"/></symbol>
   <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3M11 8v6M8 11h6"/></symbol>
 </svg>
 
 <a href="#main" class="skip-link">Skip to content</a>
@@ -358,9 +375,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     <div class="grid-feat">
       <!-- Vesalta (flagship) -->
       <article class="project-card flagship reveal">
-        <div class="shot shot-img">
-          <img src="/pm-agent-morning-brief.png" alt="Vesalta Delivery morning brief — portfolio pulse, blocker spotlight and suggested next moves" loading="lazy" width="1600" height="1000">
-        </div>
+        <a class="shot shot-img shot-zoom" href="#lb-vesalta" aria-label="Enlarge Vesalta Delivery morning brief screenshot">
+          <img src="/pm-agent-morning-brief.png" alt="Vesalta Delivery morning brief — portfolio pulse, blocker spotlight and suggested next moves" loading="lazy" width="3200" height="3330">
+          <span class="zoom-hint"><svg class="icon"><use href="#i-search"/></svg></span>
+        </a>
         <div class="card-body">
           <div class="card-top"><span class="badge-flag">FLAGSHIP</span><span class="status s-prod">Production</span></div>
           <h3>Vesalta</h3>
@@ -373,9 +391,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
       <!-- Verable -->
       <article class="project-card reveal">
-        <div class="shot shot-img">
-          <img src="/verable/verable-01-problem.png" alt="Verable — AI career intelligence walkthrough (problem framing)" loading="lazy" width="1600" height="1000">
-        </div>
+        <a class="shot shot-img shot-contain shot-zoom" href="#lb-verable" aria-label="Enlarge Verable screenshot">
+          <img src="/verable/verable-01-problem.png" alt="Verable — AI career intelligence walkthrough (problem framing)" loading="lazy" width="1800" height="600">
+          <span class="zoom-hint"><svg class="icon"><use href="#i-search"/></svg></span>
+        </a>
         <div class="card-body">
           <div class="card-top"><span></span><span class="status s-prod">Production</span></div>
           <h3>Verable</h3>
@@ -530,6 +549,10 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
   </div>
 </section>
 </main>
+
+<!-- Pure-CSS :target lightboxes for featured screenshots -->
+<a id="lb-vesalta" class="lightbox" href="#work" aria-label="Close enlarged image"><span class="lightbox-close" aria-hidden="true">&times;</span><img src="/pm-agent-morning-brief.png" alt="Vesalta Delivery morning brief — enlarged"></a>
+<a id="lb-verable" class="lightbox" href="#work" aria-label="Close enlarged image"><span class="lightbox-close" aria-hidden="true">&times;</span><img src="/verable/verable-01-problem.png" alt="Verable — enlarged"></a>
 
 <footer><div class="wrap"><span>© 2026 Christopher McCourt</span><span>Nashville, TN · chris@cmccourt.net</span></div></footer>
 
