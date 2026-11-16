@@ -220,7 +220,7 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdro
 .quote span{font-size:44px;color:var(--teal);line-height:1}
 
 /* More work */
-.grid-4m{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.grid-4m{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .small-card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:8px;transition:transform .16s,box-shadow .16s}
 .small-card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(15,23,42,.07)}
 .small-card h3{font-size:18px}
@@ -469,7 +469,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
           <svg class="icon"><use href="#i-rocket"/></svg>
           <h3>Vesalta <span>Delivery</span></h3>
           <p class="sys-tagline">See what needs attention next.</p>
-          <p class="sys-desc">Transforms current delivery data into risk intelligence and decision support. It applies deterministic analysis first, then makes governed AI judgment available for deeper analysis — inside the tools PMs already use.</p>
+          <p class="sys-desc">Transforms current delivery data into risk intelligence and decision support. It applies deterministic analysis first, then makes governed AI judgment available for deeper analysis. Delivered to Claude via MCP; ChatGPT and Copilot connectors are built but not deployed.</p>
           <ul class="checks checks-rich">
             <li><svg class="icon"><use href="#i-check"/></svg><span><strong>Delivery signals from Jira</strong>Ingest and normalize delivery data.</span></li>
             <li><svg class="icon"><use href="#i-check"/></svg><span><strong>Deterministic risk scoring (Tier 1)</strong>Always-on rules and thresholds.</span></li>
@@ -544,6 +544,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
     </div>
     <div class="grid-4m">
       <a class="small-card reveal" href="https://app.truetempo.us/" target="_blank" rel="noopener"><span class="status s-proto">Prototype · Live on AWS</span><h3>TrueTempo</h3><p>Margin intelligence for professional-services firms. Live demo on synthetic data.</p><span class="small-link">View live demo →</span></a>
+      <a class="small-card reveal" href="https://github.com/chrismc89" target="_blank" rel="noopener"><span class="status s-dev">In Development</span><h3>Agentic PMO</h3><p>Scheduled, role-scoped agents that pull Jira, gate the data and rank risks into a daily brief. Built and tested, not yet deployed.</p></a>
       <a class="small-card reveal" href="https://github.com/chrismc89" target="_blank" rel="noopener"><span class="status s-proto">Prototype</span><h3>Delivery Insights</h3><p>Earned-value and flow analytics across Scrum, Kanban, SAFe and PMI. Built, not yet deployed.</p></a>
       <a class="small-card reveal" href="https://github.com/chrismc89" target="_blank" rel="noopener"><span class="status s-dev">Active Development</span><h3>Northline</h3><p>Program and PI health.</p></a>
       <a class="small-card reveal" href="https://github.com/chrismc89" target="_blank" rel="noopener"><span class="status s-pilot">Pilot Ready</span><h3>Keel Watch</h3><p>Renewal-risk intelligence.</p></a>
